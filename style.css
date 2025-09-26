@@ -2467,19 +2467,45 @@ footer {
 
 /* ✅ كود استجابة شامل لكل الشاشات */
 /* الأساس: خلي أي عنصر ياخد حجمه صح */
+/* ========================== */
+/* ✅ RESET + BOX SIZING */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   max-width: 100%;
 }
 
-/* الصور والفيديوهات تتظبط */
+/* ========================== */
+/* ✅ BODY + TEXT */
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-x: hidden; /* يمنع شريط التمرير الأفقي */
+  padding: 0;
+  margin: 0;
+}
+
+/* ========================== */
+/* ✅ CONTAINERS */
+.container, .wrapper {
+  width: 100%;
+  max-width: 1200px; /* أقصى عرض للشاشات الكبيرة */
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* ========================== */
+/* ✅ IMAGES / VIDEO / IFRAME */
 img, video, iframe {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* الجداول تتحرك لو الشاشة صغيرة */
+/* ========================== */
+/* ✅ TABLES */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -2488,55 +2514,137 @@ table {
   white-space: nowrap;
 }
 
-/* النصوص */
-body {
-  line-height: 1.6;
-  word-wrap: break-word;
-  overflow-x: hidden; /* يمنع شريط تمرير أفقي */
-}
-
-/* الحاويات */
-.container, .wrapper {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-/* القوائم */
+/* ========================== */
+/* ✅ NAVIGATION */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-/* الأزرار */
-button, .btn {
+/* ========================== */
+/* ✅ BUTTONS */
+button, .btn, .cta-button {
   max-width: 100%;
   padding: 10px 15px;
   font-size: 1em;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 /* ========================== */
-/* 📱 موبايل (شاشات صغيرة ≤ 600px) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
+/* ✅ MODULES */
+.module-box {
+  width: 100%;
+  margin: auto;
+}
+.module-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.module-img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+.text-container, .module-text {
+  padding: 20px;
+  margin: 0;
+}
 
+/* ========================== */
+/* ✅ SCENARIO */
+.scenario-box .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.scenario-box .type {
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* ========================== */
+/* ✅ TOOLS / EXAMPLES */
+.tools-grid,
+.components-grid-simple,
+.tools-grid-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+.example-header h3 {
+  font-size: 1.2em;
+}
+
+/* ========================== */
+/* ✅ TESTS */
+.test-item, .test-box, .test-content {
+  max-width: 100%;
+}
+.tests-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 5px;
+}
+
+/* ========================== */
+/* ✅ CAROUSEL */
+.module-carousel .item img {
+  height: auto;
+  max-height: 250px;
+  display: block;
+  margin: auto;
+}
+
+/* ========================== */
+/* ✅ FOOTER */
+footer {
+  font-size: 12px;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-info, .uni, .faculty, .dept, .name, .job {
+  font-size: 10px;
+}
+.footer-year {
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+/* ========================== */
+/* ✅ SHINY TITLES */
+.shiny-name-title { font-size: 28px; }
+.shiny-mini-title { font-size: 22px; }
+.shiny-minismall-title { font-size: 18px; }
+.shiny-name.small-title { font-size: 22px; }
+.modal-content p.shiny-name { font-size: 16px; }
+
+/* ========================== */
+/* ✅ PARTICLES */
+#particles-js,
+#particles-banner {
+  display: block;
+}
+
+/* ========================== */
+/* 📱 MEDIA QUERIES MOBILE */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
   h1 { font-size: 22px; }
   h2 { font-size: 20px; }
   h3 { font-size: 18px; }
 
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .container, .wrapper { padding: 0 20px; } /* حواف مريحة على الموبايل */
 
-  /* ✅ الصور */
+  nav ul { flex-direction: column; align-items: flex-start; }
+
+  /* الصور */
   .img-project,
   .center-image,
   .left-image {
@@ -2546,102 +2654,62 @@ button, .btn {
     margin: 0 0 15px 0;
   }
 
-  /* ✅ أعمدة السيناريو */
-  .scenario-box .row {
-    flex-direction: column;
-  }
-  .scenario-box .type {
-    width: 100%;
-    min-width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-  }
+  /* السيناريو */
+  .scenario-box .row { flex-direction: column; }
+  .scenario-box .type { width: 100%; min-width: 100%; }
 
-  /* ✅ أدوات وأمثلة */
+  /* أدوات وأمثلة */
   .tools-grid,
   .components-grid-simple,
   .tools-grid-simple {
     grid-template-columns: 1fr;
-    justify-content: center;
   }
-  .example-header h3 {
-    font-size: 20px;
-  }
+  .example-header h3 { font-size: 20px; }
 
-  /* ✅ موديولات */
-  .module-box {
-    width: 90%;
-    margin: auto;
-  }
-  .module-banner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .module-img {
-    margin: auto;
-    display: block;
-  }
-  .text-container,
-  .module-text {
-    margin: 0;
-    padding: 20px;
-  }
+  /* الموديولات */
+  .module-box { width: 100%; margin: auto; }
+  .module-banner { flex-direction: column; text-align: center; }
+  .module-img { margin: auto; display: block; }
+  .text-container, .module-text { padding: 15px; margin: 0; }
 
-  /* ✅ الأزرار */
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 14px;
-    margin-top: 8px;
-  }
+  /* الأزرار */
+  .cta-button { padding: 10px 15px; font-size: 14px; margin-top: 8px; }
 
-  /* ✅ الاختبارات */
-  .test-item {
-    max-width: 100%;
-  }
-  .test-box {
-    width: 100%;
-    font-size: 16px;
-  }
-  .test-content {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  .tests-container {
-    gap: 10px;
-    padding: 0 5px;
-  }
+  /* الاختبارات */
+  .test-box { font-size: 16px; }
+  .test-content { padding: 0 10px; }
 
-  /* ✅ الكاروسيل */
-  .module-carousel .item img {
-    height: 150px;
-  }
+  /* الكاروسيل */
+  .module-carousel .item img { height: 150px; }
 
-  /* ✅ الفوتر */
-  footer {
-    font-size: 9px;
-    padding: 2px 0;
-  }
-  .footer-info {
-    font-size: 10px;
-  }
-  .uni, .faculty, .dept, .name, .job {
-    font-size: 8px;
-  }
-  .footer-year {
-    font-size: 7px; /* ✅ تصغير السنة */
-    margin-top: 2px;
-  }
+  /* الفوتر */
+  footer { font-size: 9px; padding: 5px 0; }
+  .footer-info, .uni, .faculty, .dept, .name, .job { font-size: 8px; }
+  .footer-year { font-size: 7px; }
 
-  /* ✅ إخفاء تأثير الجزيئات (Particles) */
+  /* إخفاء الجزيئات */
   #particles-js,
-  #particles-banner {
-    display: none !important;
-  }
+  #particles-banner { display: none !important; }
 
-  /* ✅ العناوين الخاصة (shiny titles) */
+  /* العناوين الخاصة */
   .shiny-name-title { font-size: 22px; }
   .shiny-mini-title { font-size: 18px; }
   .shiny-minismall-title { font-size: 14px; }
   .shiny-name.small-title { font-size: 18px; }
   .modal-content p.shiny-name { font-size: 16px; }
+}
+
+/* ========================== */
+/* 💻 MEDIA QUERIES TABLET */
+@media (max-width: 1024px) {
+  body { font-size: 15px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 20px; }
+}
+
+/* ========================== */
+/* 🖥 LARGE SCREENS */
+@media (min-width: 1200px) {
+  .container, .wrapper { padding: 0 30px; }
 }
