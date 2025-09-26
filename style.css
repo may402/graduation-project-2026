@@ -269,10 +269,7 @@ border-left:8px solid transparent;
   line-height:2;
 }
 .ch-tip > div:first-child { background:#f3e8ff; }
-@media (max-width: 768px) {
-  .ch-row { grid-template-columns: 1fr; }
-  .ch-head { display:none; } /* نخفي ترويسة الأعمدة في الموبايل */
-}  
+ 
 
 /* الأخطاء */
 /* === التايم لاين الأساسي === */
@@ -448,15 +445,7 @@ border-left:8px solid transparent;
   color: #333;
 }
 
-/* للهواتف الصغيرة */
-@media (max-width: 768px) {
-  .img-project {
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 0 0 15px 0;
-  }
-}
+
 
 
 /* العنوان على اليمين */
@@ -481,12 +470,7 @@ border-left:8px solid transparent;
   margin: 0 auto;
 }
 
-/* للهواتف الصغيرة */
-@media (max-width: 768px) {
-  .center-image {
-    width: 100%; /* الصورة تمتد بالكامل على الموبايل */
-  }
-}
+
 
 
 /* رحلة اعداد الخطة */
@@ -512,12 +496,7 @@ border-left:8px solid transparent;
   margin: 0 auto;
 }
 
-/* للهواتف الصغيرة */
-@media (max-width: 768px) {
-  .center-image {
-    width: 100%; /* الصورة تمتد بالكامل على الموبايل */
-  }
-}
+
 
   /* الصناديق بتاعت المفهوم والاهميه بتاعت مفهوم الخطة */
 .section-box {
@@ -553,8 +532,6 @@ border-left:8px solid transparent;
 }
 
 
-
-
 .section-box p, 
 .section-box ul {
   font-size: 18px;
@@ -563,15 +540,6 @@ border-left:8px solid transparent;
   color: #333;
 }
 
-/* للهواتف الصغيرة: الصورة فوق النص */
-@media (max-width: 768px) {
-  .left-image {
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 0 0 15px 0;
-  }
-}
 
   .module-section {
     margin: 40px auto;
@@ -1038,18 +1006,7 @@ border-left:8px solid transparent;
   font-size:16px;
 }
 
-/* 📱 موبايل: خلى الأعمدة تحت بعض */
-@media (max-width:600px){
-  .scenario-box .row{
-    flex-direction:column;
-  }
-  .scenario-box .type{
-    width:100%;
-    min-width:100%;
-    text-align:center; /* 👈 يخلي النص في النص */
-    border-bottom:1px solid #eee;
-  }
-}
+
 
   .tools-table {
     direction: rtl;
@@ -1193,14 +1150,7 @@ border-left:8px solid transparent;
   font-weight:600;
 }
 
-/* Responsive */
-@media (max-width: 1024px){
-  .tools-grid{ grid-template-columns: repeat(2, 1fr); } /* 2 كرت في الصف للشاشات المتوسطة */
-}
-@media (max-width: 640px){
-  .tools-grid{ grid-template-columns: 1fr; } /* كرت واحد لكل صف للموبايل */
-  .example-header h3{ font-size:20px; }
-}
+
 
 .components-grid-simple {
   display: grid;
@@ -1232,13 +1182,7 @@ border-left:8px solid transparent;
   line-height: 1.5;
 }
 
-/* Responsive */
-@media (max-width: 640px){
-  .components-grid-simple{
-    grid-template-columns: 1fr; /* يتحول لصف عمودي على الموبايل */
-    justify-content: center;
-  }
-}
+
 .tools-grid-simple{
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1271,13 +1215,7 @@ border-left:8px solid transparent;
   line-height:1.5;
 }
 
-/* Responsive */
-@media (max-width: 640px){
-  .tools-grid-simple{
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-}
+
 
 /* ✅ الخطوط  الرئيسية */
 body, p, span, div, button, a {
@@ -1446,11 +1384,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #6A0DAD;
   margin-top: 10px;
 }
-@media (max-width: 600px) {
-  .module-carousel .item img {
-    height: 150px;
-  }
-}
+
 
 .module-carousel .item h4 {
   margin-top: 8px;
@@ -1461,13 +1395,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ✅ تنسيقات صفحة أهداف البيئة */
+.environment-goals .goals-box {
+  max-width: 100%;   /* هنا التغيير يطبق على صفحة البيئة فقط */
+}
+
 .environment-goals {
   padding: 40px 20px;
   background-color: #f8f4ff;
      font-family: 'Cairo', 'Simplified Arabic', sans-serif;
   text-align: center;
     margin-top: 50px; /* ممكن تعدلي الرقم حسب الظهور */
-
 }
 
 .intro-heading h2 {
@@ -1485,7 +1422,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .goals-box {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 30px 40px;
@@ -1493,6 +1430,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 20px rgba(106, 13, 173, 0.1);
   text-align: right;
 }
+
 
 .goals-list {
   list-style: none;
@@ -1517,6 +1455,27 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
 }
 
+/* ✅ الصندوق العام للأهداف */
+.goals-box {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.1);
+  text-align: right;
+}
+
+/* ✅ صندوق التعليمات */
+.instructions-box {
+  max-width: 1100px;   /* أصغر شوية */
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(106, 13, 173, 0.1);
+  text-align: right;
+}
 
 
 button {
@@ -2046,40 +2005,38 @@ nav ul li a:focus,
 
 
 /* ✅بتاعت  الصفحة الرييسية */ 
-
 .shiny-name-title {
   font-size: 43px;
 }
 .shiny-mini-title{
   font-size: 30px;
 }
-
 .shiny-minismall-title{
-  font-size: 24px;
+  font-size: 20px;
   color: #b92272;
 }
 
-
+/* ✅ بوكس الاختبارات */
 /* ✅ بوكس الاختبارات */
 .tests-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   margin: 50px auto;
   padding: 0 30px;
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 .test-item {
-  width: 300px;
+  flex: 1 1 300px;   /* يبدأ من 300px ويكبر حسب المساحة */
+  max-width: 450px;  /* أقصى عرض للبكس */
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
-
 
 .test-box {
   display: block;
@@ -2107,17 +2064,9 @@ nav ul li a:focus,
   line-height: 1.7;
   text-align: right;
 }
-@media (max-width: 600px) {
-  .test-box {
-    width: 90%;
-    font-size: 16px;
-  }
 
-  .test-content {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-}
+
+
 
 /* ✅ الموديولات */
 .modules-container {
@@ -2128,7 +2077,6 @@ nav ul li a:focus,
   max-width: 1000px;
   padding: 20px;
 }
-
 .module-box {
   display: block;
   padding: 25px;
@@ -2159,7 +2107,7 @@ nav ul li a:focus,
   color: #4B0082;
   background-color: transparent;
   text-align: right;
-  margin-right: 0;
+  margin: right 5px;
   margin-left: auto;
   opacity: 0;
   transform: translateY(40px) translateX(-60px);
@@ -2358,11 +2306,10 @@ nav ul li a:focus,
   line-height: 2;
 }
 .modal-content p.shiny-name {
-    font-size: 35px;
+    font-size: 22px;
   font-weight: bold;
   color: #be0845;
   display: inline-block;
-  font-size: 18px;
   margin-bottom: 15px;
 }
 .modal-content .instructions {
@@ -2408,7 +2355,7 @@ nav ul li a:focus,
 /* ✅ زر نداء الإجراء CTA */
 .cta-button {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 5px;
   background: linear-gradient(135deg, #6A0DAD, #9c27b0);
   color: white;
   padding: 12px 25px;
@@ -2428,40 +2375,42 @@ nav ul li a:focus,
 /* ✅ فوتر */
 footer {
   text-align: center;
-  padding: 5px; /* كان 10px */
-  background-color: transparent;
-  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
+  padding: 3px 0;  /* 👈 يقلل الارتفاع الكلي */
   background: linear-gradient(135deg, #ead8ff, #fce4ff, #e6def0);
-  font-size: 8px;
-  line-height: 0.5; /* كان 0.5 */
-  margin-top: auto; /* يخلي الفوتر دايمًا في الأسفل */
+  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
+  font-size: 10px; /* 👈 الحجم الأساسي صغير */
+  line-height: 1.2; /* 👈 تماسك السطور */
+  margin-top: auto;
+}
 
+/* النصوص داخل الفوتر */
+.footer-info {
+  font-size: 11px;
+  line-height: 1.3;
+  color: #333;
 }
 
 .footer-info span {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 3px; /* 👈 مسافة أقل بين العناصر */
 }
 
-.footer-info {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #333;
-  transition: all 0.3s ease;
-}
-
+/* النصوص الملونة */
 .uni, .faculty, .dept, .name, .job {
   color: #6A0DAD;
   font-weight: bold;
-  transition: color 0.3s;
-    font-size: 10px;
+  font-size: 9px;
 }
 
+/* سنة الفوتر */
 .footer-year {
   font-size: 8px;
   color: #888;
-  margin-top: 5px;
+  margin-top: 2px; /* 👈 تقليل المسافة */
 }
+
+
+
 
 .social-icons a {
   margin: 0 10px;
@@ -2485,47 +2434,6 @@ footer {
   display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-
-
-
-/* ✅ آخر سطر في ملف style.css */
-/* ✅ تنسيقات مخصصة للشاشات الصغيرة (الموبايل) */
-@media (max-width: 600px) {
-  .module-box {
-    width: 90%;
-    margin: auto;
-  }
-
-  
-  .module-banner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .module-img {
-    margin: auto;
-    display: block;
-  }
-
-  .text-container, .module-text {
-    margin: 0;
-    padding: 20px;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
-
-  /* ✅ إخفاء تأثير الجزيئات (Particles) على الموبايل */
-  #particles-js,
-  #particles-banner {
-    display: none !important;
-  }
 }
 
 
@@ -2556,10 +2464,6 @@ footer {
   transition: 0.3s ease;
   margin-left: 8px;
 }
-
-
-
-
 
 /* ✅ كود استجابة شامل لكل الشاشات */
 /* الأساس: خلي أي عنصر ياخد حجمه صح */
@@ -2617,8 +2521,8 @@ button, .btn {
 }
 
 /* ========================== */
-/* 📱 موبايل (شاشات صغيرة أقل من 576px) */
-@media (max-width: 576px) {
+/* 📱 موبايل (شاشات صغيرة ≤ 600px) */
+@media (max-width: 600px) {
   body {
     font-size: 14px;
   }
@@ -2631,36 +2535,113 @@ button, .btn {
     flex-direction: column;
     align-items: flex-start;
   }
-}
 
-/* ========================== */
-/* 📲 تابلت (من 577px لحد 992px) */
-@media (min-width: 577px) and (max-width: 992px) {
-  body {
+  /* ✅ الصور */
+  .img-project,
+  .center-image,
+  .left-image {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+
+  /* ✅ أعمدة السيناريو */
+  .scenario-box .row {
+    flex-direction: column;
+  }
+  .scenario-box .type {
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* ✅ أدوات وأمثلة */
+  .tools-grid,
+  .components-grid-simple,
+  .tools-grid-simple {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .example-header h3 {
+    font-size: 20px;
+  }
+
+  /* ✅ موديولات */
+  .module-box {
+    width: 90%;
+    margin: auto;
+  }
+  .module-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .module-img {
+    margin: auto;
+    display: block;
+  }
+  .text-container,
+  .module-text {
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* ✅ الأزرار */
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  /* ✅ الاختبارات */
+  .test-item {
+    max-width: 100%;
+  }
+  .test-box {
+    width: 100%;
     font-size: 16px;
   }
-
-  h1 { font-size: 26px; }
-  h2 { font-size: 22px; }
-  h3 { font-size: 20px; }
-
-  .container {
-    width: 90%;
+  .test-content {
+    max-width: 100%;
+    padding: 0 10px;
   }
-}
-
-/* ========================== */
-/* 💻 كمبيوتر (أكبر من 992px) */
-@media (min-width: 993px) {
-  body {
-    font-size: 18px;
+  .tests-container {
+    gap: 10px;
+    padding: 0 5px;
   }
 
-  h1 { font-size: 32px; }
-  h2 { font-size: 28px; }
-  h3 { font-size: 24px; }
-
-  .container {
-    width: 80%;
+  /* ✅ الكاروسيل */
+  .module-carousel .item img {
+    height: 150px;
   }
+
+  /* ✅ الفوتر */
+  footer {
+    font-size: 9px;
+    padding: 2px 0;
+  }
+  .footer-info {
+    font-size: 10px;
+  }
+  .uni, .faculty, .dept, .name, .job {
+    font-size: 8px;
+  }
+  .footer-year {
+    font-size: 7px; /* ✅ تصغير السنة */
+    margin-top: 2px;
+  }
+
+  /* ✅ إخفاء تأثير الجزيئات (Particles) */
+  #particles-js,
+  #particles-banner {
+    display: none !important;
+  }
+
+  /* ✅ العناوين الخاصة (shiny titles) */
+  .shiny-name-title { font-size: 22px; }
+  .shiny-mini-title { font-size: 18px; }
+  .shiny-minismall-title { font-size: 14px; }
+  .shiny-name.small-title { font-size: 18px; }
+  .modal-content p.shiny-name { font-size: 16px; }
 }
