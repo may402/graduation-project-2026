@@ -2691,11 +2691,11 @@ footer {
   #particles-js,
   #particles-banner { display: none !important; }
 
-  /* العناوين الخاصة */
-  .shiny-name-title { font-size: 22px; }
-  .shiny-mini-title { font-size: 18px; }
-  .shiny-minismall-title { font-size: 14px; }
-  .shiny-name.small-title { font-size: 18px; }
+ /* العناوين الخاصة */
+  .shiny-name-title { font-size: 24px; }
+  .shiny-mini-title { font-size: 20px; }
+  .shiny-minismall-title { font-size: 18px; }
+  .shiny-name.small-title { font-size: 16px; }
   .modal-content p.shiny-name { font-size: 16px; }
 }
 
@@ -2703,9 +2703,9 @@ footer {
 /* 💻 MEDIA QUERIES TABLET */
 @media (max-width: 1024px) {
   body { font-size: 15px; }
-  h1 { font-size: 26px; }
-  h2 { font-size: 22px; }
-  h3 { font-size: 20px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 16px; }
 }
 
 /* ========================== */
