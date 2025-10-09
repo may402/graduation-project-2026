@@ -1,0 +1,343 @@
+<!-- === الوكيل الذكي الشامل: نص + صوت + مرئي + روابط === -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وكيل الدعم الذكي</title>
+  <!-- === الوكيل الذكي الشامل: نص + صوت + مرئي + روابط === -->
+  <style>
+    :root{
+      --brand:#0544b0; --brand2:#0544b0; --bg:#f9f6ff; --card:#fff; --text:#222;
+    }
+    .chatbot-icon{
+      position:fixed; bottom:90px; left:20px; width:60px; height:60px; border-radius:50%;
+      background:var(--brand); color:#fff; display:flex; align-items:center; justify-content:center;
+      font-size:28px; box-shadow:0 6px 16px rgba(0,0,0,.15); cursor:pointer; z-index:9999; transition:.25s;
+    }
+    .chatbot-icon:hover{ transform:scale(1.08); background:var(--brand2); }
+
+    .chatbot-window{
+      position:fixed; bottom:160px; left:20px; width:340px; max-width:92vw; display:none; flex-direction:column;
+      background:var(--card); border-radius:16px; box-shadow:0 14px 34px rgba(0,0,0,.18); overflow:hidden; z-index:9999;
+      transform:translateY(12px); opacity:0; transition:transform .25s ease, opacity .25s ease;
+    }
+    .chatbot-window.open{ display:flex; transform:translateY(0); opacity:1; }
+    .chatbot-header{
+      background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff; padding:12px 12px;
+      display:flex; align-items:center; justify-content:space-between; gap:8px; font-weight:700;
+    }
+    .chatbot-actions{ display:flex; gap:6px; }
+    .chatbot-btn{
+      border:none; background:rgba(255,255,255,.18); color:#fff; padding:6px 10px; border-radius:10px; cursor:pointer; font-size:13px;
+    }
+    .chatbot-close{ border:none; background:transparent; color:#fff; font-size:18px; cursor:pointer; }
+
+    .chatbot-messages{ height:260px; overflow-y:auto; padding:12px; background:#fff; font-family:"Cairo",sans-serif; direction:rtl; }
+    .msg{ margin:8px 0; line-height:1.6; font-size:14px; color:var(--text); }
+    .msg.me{ text-align:left; }
+    .bubble{
+      display:inline-block; padding:8px 10px; border-radius:12px; max-width:92%;
+      background:#f3e8ff; border:1px solid #eadbff;
+    }
+    .msg.me .bubble{ background:#eef7ff; border-color:#d8ecff; }
+
+    .media{
+      margin-top:6px; border-radius:12px; overflow:hidden; border:1px solid #eee;
+    }
+    .media img, .media video{ width:100%; height:auto; display:block; }
+
+    .quickbar{ display:flex; flex-wrap:wrap; gap:6px; padding:8px 12px; border-top:1px dashed #eee; background:#fcfbff; }
+    .quickbar button{
+      border:1px solid #e7e3f3; background:#fff; border-radius:999px; padding:6px 10px; cursor:pointer; font-size:12px;
+    }
+
+    .chatbot-input{ display:flex; gap:6px; padding:10px; border-top:1px solid #eee; background:#fff; }
+    .chatbot-input input{
+      flex:1; border:1px solid #e7e3f3; border-radius:12px; padding:8px 10px; outline:none;
+    }
+    .chatbot-input .send, .chatbot-input .mic, .chatbot-input .tts{
+      border:none; border-radius:12px; padding:8px 10px; cursor:pointer; background:var(--brand); color:#fff; font-size:14px;
+    }
+    .chatbot-input .mic.listening{ background:#e11d48; } /* أحمر أثناء التسجيل */
+    .note{ font-size:12px; color:#666; padding:6px 12px; background:#fff8; }
+
+  </style>
+</head>
+<body>
+
+  <!-- الأيقونة -->
+  <div class="chatbot-icon" id="cbIcon" title="وكيل الدعم">💬</div>
+
+  <!-- نافذة الوكيل -->
+  <div class="chatbot-window" id="cbWin" dir="rtl">
+    <div class="chatbot-header">
+      <span>وكيل الدعم الذكي للموديولات</span>
+      <div class="chatbot-actions">
+        <button class="chatbot-btn" id="cbToggleTTS" title="تشغيل/إيقاف النطق">🔊 النطق</button>
+        <button class="chatbot-close" id="cbClose" title="إغلاق">✖</button>
+      </div>
+    </div>
+
+    <div class="chatbot-messages" id="cbMsgs">
+      <div class="msg">
+        <div class="bubble">
+          أهلاً 👋 أنا مساعدك الذكي لتقديم الدعم لك. اسألني عن <b>التحية، الخطة، التنفيذ، التقييم، الموارد</b>… وسأعطيك نصًا + صوت + أمثلة مرئية وروابط.
+        </div>
+      </div>
+    </div>
+
+    <div class="quickbar" id="cbQuick">
+      <button data-q="عايزة خطة تنفيذ أسبوعية">خطة تنفيذ</button>
+      <button data-q="إزاي أحسن العرض التقديمي؟">العرض التقديمي</button>
+      <button data-q="ايه متطلبات التسليم؟">متطلبات التسليم</button>
+      <button data-q="أدوات للإنتاج الرقمي">أدوات الإنتاج</button>
+    </div>
+
+    <div class="chatbot-input">
+      <input type="text" id="cbInput" placeholder="اكتب سؤالك…">
+      <button class="mic" id="cbMic" title="تحدث">🎤</button>
+      <button class="send" id="cbSend">إرسال</button>
+    </div>
+    <div class="note" id="cbNote" style="display:none;"></div>
+  </div>
+
+
+<script>
+  
+/* ===== إعدادات قابلة للتعديل ===== */
+const RESPONSES = [
+  { key: /خطة|جدول|تنظيم/gi,
+    text: "قسّم مشروعك لمهام صغيرة (تحليل→تصميم→إنتاج→مراجعة→تسليم). خصص أهداف أسبوعية ومؤشرات قياس بسيطة.",
+    media: null,
+    links: [{label:"قالب خطة تنفيذ", href:"#"}, {label:"قائمة مهام جاهزة", href:"#"}]
+  },
+  { key: /تنفيذ|برمجة|إنتاج/gi,
+    text: "ابدأ بأبسط نسخة قابلة للعمل ، وثّق لقطات التقدم، واطلبي تغذية راجعة مبكرة.",
+    media: null,
+    links: [{label:"دليل أدوات الإنتاج", href:"#"}, {label:"نموذج توثيق", href:"#"}]
+  },
+  { key: /تقييم|روبرك|درجات/gi,
+    text: "استخدم تقييم الأقران مبكرًا + تقييم ذاتي وفق قائمة معايير (وضوح الأهداف، الدقة، العرض).",
+    media: null,
+    links: [{label:"نموذج تقييم ذاتي", href:"#"}, {label:"روبرك العرض", href:"#"}]
+  },
+  { key: /عرض|برزنتيشن|شرائح/gi,
+    text: "حافظ على 10-12 شريحة واضحة، خط كبير، صور داعمة، وتدريب مسبق مع ضبط الوقت.",
+    media: null,
+    links: [{label:"قالب شرائح", href:"#"}, {label:"نصائح الإلقاء", href:"#"}]
+  },
+  { key: /تسليم|موعد|نهائي/gi,
+    text: "تأكد من: نسخة نهائية + تقرير منسق (ملخص/مقدمة/منهجية/نتائج/توصيات) + ملاحق ومراجع + نسخة للعرض.",
+    media: null,
+    links: [{label:"متطلبات التسليم", href:"#"}, {label:"قائمة تحقق نهائية", href:"#"}]
+  },
+
+  /* ====== التحيات العشوائية ====== */
+  { key: /السلام\s*عليكم/i,
+    text: [
+      "وعليكم السلام ورحمة الله وبركاته 🌸",
+      "وعليكم السلام 🌷 كيف أقدر أساعدك؟",
+      "وعليكم السلام 🙌 أهلاً بيك"
+    ],
+    media: null, links: [] },
+
+  { key: /مرحبا|اهلا|هاي/i,
+    text: [
+      "أهلاً بيك 👋 يسعدني أساعدك.",
+      "مرحبًا 🙏 كيفك اليوم؟",
+      "هاي 🌟 جاهز/ة نبدأ؟"
+    ],
+    media: null, links: [] },
+
+  { key: /صباح\s*الخير/i,
+    text: [
+      "صباح النور والسرور ☀️",
+      "صباح الورد والياسمين 🌹",
+      "صباح النشاط والطاقة 💪"
+    ],
+    media: null, links: [] },
+
+  { key: /مساء\s*الخير/i,
+    text: [
+      "مساء الورد والياسمين 🌙",
+      "مساء الفل 🌷",
+      "مساء الخير 🙌 كيف كان يومك؟"
+    ],
+    media: null, links: [] }
+];
+
+/* رد افتراضي */
+const FALLBACK = {
+  text: "وضحّ سؤالك بكلمة مفتاحية (خطة، تنفيذ، تقييم، عرض، تسليم) عشان أقدر أساعدك بدقة 🙌",
+  media: null, links:[{label:"كل الموارد", href:"#all"}]
+};
+
+/* حالة النطق (هنخلّيه يدوي فقط) */
+let TTS_ENABLED = false;
+
+/* ===== عناصر DOM ===== */
+const icon   = document.getElementById('cbIcon');
+const win    = document.getElementById('cbWin');
+const closeB = document.getElementById('cbClose');
+const input  = document.getElementById('cbInput');
+const send   = document.getElementById('cbSend');
+const msgs   = document.getElementById('cbMsgs');
+const quick  = document.getElementById('cbQuick');
+const micBtn = document.getElementById('cbMic');
+const note   = document.getElementById('cbNote');
+const ttsBtn = document.getElementById('cbToggleTTS'); // هنستخدم نفس الزر كـ "اقرأ آخر رد"
+
+/* ===== فتح/غلق ===== */
+icon.addEventListener('click', () => { win.classList.add('open'); });
+closeB.addEventListener('click', () => { win.classList.remove('open'); });
+
+/* ===== أزرار سريعة ===== */
+quick.addEventListener('click', (e)=>{
+  if(e.target.tagName.toLowerCase()==='button'){
+    const q = e.target.getAttribute('data-q') || e.target.textContent;
+    addMessage(q, true);
+    respond(q);
+  }
+});
+
+/* ===== إرسال يدوي ===== */
+send.addEventListener('click', () => {
+  const q = input.value.trim();
+  if(!q) return;
+  addMessage(q, true);
+  input.value = '';
+  respond(q);
+});
+input.addEventListener('keypress', e => { if(e.key==='Enter') send.click(); });
+
+/* ===== إضافة رسالة ===== */
+function addMessage(text, me=false, htmlExtras=null){
+  const wrap = document.createElement('div');
+  wrap.className = 'msg' + (me ? ' me' : '');
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = text;
+  wrap.appendChild(bubble);
+
+  // محتوى مرئي/روابط إن وجدت
+  if(htmlExtras){
+    if(htmlExtras.media){
+      const m = document.createElement('div'); m.className='media';
+      if(htmlExtras.media.type==='img'){
+        const img=document.createElement('img'); img.src=htmlExtras.media.src; img.alt=htmlExtras.media.alt||'';
+        m.appendChild(img);
+      }else if(htmlExtras.media.type==='video'){
+        const v=document.createElement('video'); v.src=htmlExtras.media.src; v.controls=true; m.appendChild(v);
+      }
+      wrap.appendChild(m);
+    }
+    if(htmlExtras.links && htmlExtras.links.length){
+      const linksDiv = document.createElement('div'); linksDiv.style.marginTop='6px';
+      htmlExtras.links.forEach(l=>{
+        const a=document.createElement('a');
+        a.href=l.href; a.textContent='🔗 '+l.label; a.target='_blank';
+        a.style.display='inline-block'; a.style.margin='4px 6px 0 0';
+        a.style.fontSize='12px'; a.style.textDecoration='none';
+        a.style.color='#6a0dad'; a.style.borderBottom='1px dashed #cdb7ff';
+        linksDiv.appendChild(a);
+      });
+      wrap.appendChild(linksDiv);
+    }
+  }
+
+  msgs.appendChild(wrap);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+/* ===== منطق الرد ===== */
+function findResponse(q){
+  for(const r of RESPONSES){
+    // مهم: Reset للـ regex عشان /g ما يبهدل .test عبر الاستدعاءات
+    if (r.key && typeof r.key.lastIndex === 'number') r.key.lastIndex = 0;
+    if(r.key.test(q)) return r;
+  }
+  return FALLBACK;
+}
+
+function respond(q){
+  const r = findResponse(q);
+  let reply = r.text;
+
+  // لو الرد عبارة عن مصفوفة، نختار واحد عشوائي
+  if (Array.isArray(r.text)) {
+    reply = r.text[Math.floor(Math.random() * r.text.length)];
+  }
+
+  addMessage(reply, false, {media:r.media, links:r.links});
+  // لا نطق تلقائي
+}
+
+/* ===== النطق الصوتي (يدوي فقط) ===== */
+function speak(text){
+  try{
+    if(!('speechSynthesis' in window)) { showNote('متصفحك لا يدعم النطق الصوتي.'); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    const setVoice = () => {
+      const voices = speechSynthesis.getVoices();
+      const ar = voices.find(v=>/ar|arabic/i.test(v.lang || v.name));
+      if(ar) u.voice = ar;
+      u.lang = ar ? ar.lang : 'ar-SA';
+      speechSynthesis.cancel();
+      speechSynthesis.speak(u);
+    };
+    if (speechSynthesis.getVoices().length === 0) {
+      speechSynthesis.addEventListener('voiceschanged', setVoice, { once:true });
+    } else {
+      setVoice();
+    }
+  }catch(e){ showNote('تعذر تشغيل الصوت.'); }
+}
+
+// استخدمي زر "🔊 النطق" لقراءة آخر رد من الوكيل فقط
+ttsBtn.textContent = '🔊 النطق';
+ttsBtn.title = 'اقرأ آخر رد فقط';
+ttsBtn.addEventListener('click', ()=>{
+  // آخر رسالة من الوكيل (msg بدون .me)
+  const bubbles = msgs.querySelectorAll('.msg:not(.me) .bubble');
+  if(!bubbles.length){ showNote('لا يوجد رد لقراءته.'); return; }
+  const lastText = bubbles[bubbles.length - 1].textContent.trim();
+  if(lastText) speak(lastText);
+});
+
+/* ===== التعرف على الصوت (Speech-to-Text) ===== */
+let recognition = null;
+if('webkitSpeechRecognition' in window || 'SpeechRecognition' in window){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR();
+  recognition.lang = 'ar-SA';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onstart = ()=> { micBtn.classList.add('listening'); micBtn.textContent='⏺️'; showNote('أستمع الآن…'); };
+  recognition.onend   = ()=> { micBtn.classList.remove('listening'); micBtn.textContent='🎤'; hideNote(); };
+  recognition.onerror = (e)=> { showNote('تعذر الاستماع: '+ (e.error||'')); };
+
+  recognition.onresult = (e)=>{
+    const text = e.results[0][0].transcript;
+    input.value = text;
+    send.click();
+  };
+}else{
+  micBtn.disabled = true; micBtn.style.opacity=.6; micBtn.title='غير مدعوم في هذا المتصفح';
+}
+
+micBtn.addEventListener('click', ()=>{
+  if(!recognition){ showNote('التعرف الصوتي غير مدعوم على هذا المتصفح.'); return; }
+  try{ recognition.start(); }catch{}
+});
+
+/* ===== ملاحظات صغيرة ===== */
+function showNote(t){ note.style.display='block'; note.textContent=t; }
+function hideNote(){ note.style.display='none'; }
+</script>
+<!-- === نهاية الوكيل الذكي الشامل === -->
+
+  
+</body>
+</html>

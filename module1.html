@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <meta charset="UTF-8" />
+  <title>الموديول الأول - مشروعات التخرج</title>
+  <link rel="icon" href="images/graduation.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ✅ شريط الشعارات -->
+   <div class="logos-bar">
+    <div style="display: flex; gap: 15px;">
+       <img src="images/damietta.png" alt="شعار الجامعة" />
+              <img src="images/LOGO.jpg" alt="شعار الكلية" />
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span class="my-name">مي محمد حافظ سبلة</span>
+      <img src="images/may.jpg" alt="مي" class="my-pic" />
+      <div style="text-align: right; margin-right: 10px;">
+  <p style="margin: 0; font-weight: bold; color: #b92272;font-size: 10px "> أدوات التواصل</p>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" title="فيسبوك" style="color: #3b5998; font-size: 20px;"><i class='bx bxl-facebook-circle'></i></a>
+    <a href="https://wa.me/201062309203" target="_blank" title="واتساب" style="color: #25D366; font-size: 20px;"><i class='bx bxl-whatsapp'></i></a>
+    <a href="mailto:maysabla5557@gmail.com" title="البريد الإلكتروني" style="color: #EA4335; font-size: 20px;"><i class='bx bxl-gmail'></i></a>
+    </div>
+   </div>
+    </div>
+  </div>
+  <!-- ✅ شريط التنقل -->
+  <nav>
+  <ul class="nav-links">
+    <li><a href="index.html">الصفحة الرئيسة</a></li>
+<li><a href="instructions.html">تعليمات الاستخدام</a></li>
+    <li><a href="objectives.html">أهداف بيئة التعلم</a></li>
+       <li><a href="tests.html"> الاختبارات</a></li>
+       <li><a href="total modules.html"> الموديولات </a></li>
+<li><a href="contact-us.html" class="special-link"><i class='bx bx-group'></i> التشارك مع الزملاء</a></li>
+  </ul>
+</nav>
+  <main>
+   <div class="module-banner">
+     <img src="images/mm1.png" alt="صورة " class="module-img" >
+  <div class="module-text">
+    <p class="module-title">
+      <span class="shiny-name small-title">الموديول الأول</span>
+      <br>
+      <span class="shiny-name small-title">أساسيات عن مشروعات التخرج</span> 
+    </p>
+  </div>
+</div>
+<br>
+<h4 style="color: #095ae4;"> 
+الفيديو التعريفي للموديول الأول <br>
+يمكنك مشاهدته من خلال النقر علي الأفاتار 
+</h4>
+<!-- ✅ الأفاتار لموديول 1 -->
+<div class="video-avatar" onclick="openVideo1()">
+  <img src="images/avatar-logo.png" alt="عرض الفيديو">
+</div>
+<!-- ✅ نافذة الفيديو لموديول 1 -->
+<div class="video-popup" id="videoPopup1" 
+     style="position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:1000;">
+  <div style="position:relative; max-width:800px; width:90%;">
+    <!-- زر الإغلاق -->
+    <span onclick="closeVideo1()" 
+          style="position:absolute; top:-35px; right:-10px; font-size:28px; color:#fff; cursor:pointer;">✖</span>
+    <video id="popupVideo1" controls preload="none" style="width:100%; border-radius:10px;">
+      <source src="videos/Vm1.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+</div>
+<script>
+function openVideo1() {
+  const popup = document.getElementById("videoPopup1");
+  const video = document.getElementById("popupVideo1");
+  popup.style.display = "flex";
+  video.play();
+}
+function closeVideo1() {
+  const popup = document.getElementById("videoPopup1");
+  const video = document.getElementById("popupVideo1");
+  popup.style.display = "none";
+  video.pause();
+  video.currentTime = 0;
+}
+// ✅ إغلاق تلقائي عند انتهاء الفيديو
+document.getElementById("popupVideo1").addEventListener("ended", function() {
+  closeVideo1();
+});
+</script>
+  <div class="module-description" onclick="toggleContent(this)">
+  الهدف العام للموديول  الأول <i class='bx bx-chevron-down'></i>
+</div>
+<div class="accordion-content">
+  <h4 style="color: #333; margin: 0; white-space: nowrap;">
+    إلمام طالب تكنولوجيا التعليم بأساسيات مشروعات التخرج.
+  </h4>
+</div>
+<div class="module-description" onclick="toggleContent(this)">
+   الأهداف الإجرائية <i class='bx bx-chevron-down'></i>
+</div>
+<div class="accordion-content">
+    <h4 style="color: #0a2afd;"> 
+  بعد الانتهاء من دراسة هذا الموديول يجب أن يكون طالب تكنولوجيا التعليم قادراً على أن:
+</h4>
+<h4 style="color:  #333;">
+1. يذكر مفهوم مشروع التخرج.  <br>
+2. يحدد أهمية مشروع التخرج.<br>
+3. يعدد أهداف مشروع التخرج.<br>
+4. يذكر أنواع مشروعات التخرج في تكنولوجيا التعليم.<br>
+5. يحدد الشروط الواجب توافرها في مشروع التخرج .<br>
+6. يعدد خصائص مشروع التخرج.<br>
+7. يحدد المهارات الأساسية اللازمة لإنتاج مشروع التخرج.<br>
+8. يحدد أهم النصائح الواجب مراعاتها عند اختيار مشروع التخرج.<br>
+9. يميز بين أدوار الأطراف المشاركة في مشروع التخرج.<br>
+10. يوضح أهمية الالتزام بأخلاقيات العمل أثناء تنفيذ مشروع التخرج.<br>
+11. يوضح علاقة مشروعات التخرج بسوق العمل.<br>
+12.   يناقش التحديات الشائعة في تنفيذ مشروعات التخرج ويقترح حلولاً لها.<br>
+13. يحلل الأخطاء شائعة في مشروعات التخرج.<br>
+14. يحلل نماذج واقعية لمشروعات التخرج.<br>
+    </h4>
+  </div>
+  <div class="module-description" onclick="toggleContent(this)">
+    المحتوى والأنشطة <i class='bx bx-chevron-down'></i>
+   </div>
+           <div class="accordion-content">
+  <!-- ✅ فقرة تعريفية -->
+   <div style="display: flex; align-items: flex-start; flex-direction: row; gap: 20px; margin-top: 20px; direction: rtl;">
+  <!-- المربع الأبيض -->
+  <div style="display: flex; align-items: center; gap: 30px; background: rgba(255,255,255,0.8); padding: 20px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); font-family: 'Cairo', sans-serif; flex: 1;">
+    <!-- النص -->
+    <div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+       1 .  مفهوم مشروع التخرج  Graduation project: 
+        </h3>
+        </div>
+      <h3 style="color: #333; font-size: 20px; line-height: 1.9; text-align: justify;">
+مشروع التخرج هو نشاط بحثي أو تطبيقي ينفذه الطلاب في السنة الأخيرة من دراستهم الجامعية، 
+بهدف  توظيف المعارف والمهارات المكتسبة لحل مشكلات واقعية أو تقديم خدمات مجتمعية، وتنمية مهارات التفكير النقدي،
+ والعمل الجماعي، وحل المشكلات، والإبداع بما يتوافق مع احتياجات سوق العمل، ويشمل المشروع مراحل متعددة تبدأ باختيار الموضوع،
+  مرورًا بتخطيط البحث أو التطبيق، وصولًا إلى التنفيذ والتقديم النهائي، ويعد مادة دراسية أساسية في السنة النهائية،
+   ويجب أن يكون المشروع جديدًا، ومبتكرًا، وقابلًا للتطبيق العملي، وفق تقييم عضو هيئة التدريس المشرف واللجنة العلمية المختصة،  
+   ويُقدّم المشروع في صورته النهائية كمتطلب أساسي لنيل درجة البكالوريوس ( تخصص تكنولوجيا التعليم)، 
+   وقد يتخذ شكل دراسة بحثية، أو منتج تعليمي رقمي، أو مزيجًا منهما.
+      </h3>
+    </div>
+    <!-- الصورة -->
+    <div style="flex-shrink: 0; text-align: center;">
+      <img src="images/HHAT.png" 
+           style="
+             width: 200px; 
+             height: 200px; 
+             object-fit: cover; 
+             background-color: transparent;">
+    </div>
+  </div>
+</div>
+ <div class="activity-box-wrap">
+  <div class="activity-toggle" onclick="toggleActivity(this)">
+    <span class="title">     نشاط 1:  الاطلاع على ملف PDF </span>
+    <span class="chev">▼</span>
+  </div>
+  <div class="activity-content">
+    <div class="activity-content-inner">
+      <p><strong>يهدف النشاط إلي:</strong> فهم أساسيات ومفاهيم مشروعات التخرج من خلال الملف التالي.</p>
+      
+      <!-- زر PDF مع أيقونة -->
+      <p style="text-align:center; margin-bottom:20px;">
+        <a href="https://drive.google.com/file/d/1pTmLWA87qF62-_cU85Y5N6RAVFupmnWo/view?usp=drive_link" target="_blank"
+           style="display:inline-flex; align-items:center; gap:10px;
+                  background: linear-gradient(90deg,#1464c7,#5ce22b);
+                  color:#fff; font-weight:bold; padding:12px 24px; border-radius:12px; text-decoration:none;
+                  box-shadow:0 4px 15px rgba(0,0,0,0.2); font-family:'Cairo',sans-serif;">
+          <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" 
+               alt="PDF" style="width:70px; height:70px;">
+           افتح ملف PDF واطلع على الشرح
+        </a>
+      </p>
+      <p><strong>التعليمات:</strong></p>
+      <ol>
+        <li>اقرأ الملف بعناية.</li>
+        <li>اكتب ملحوظة أو سؤال واحد حول أهم ما فهمته.</li>
+        <li>يمكنك مشاركة ملحوظتك مع زملائك على  البيئة التشاركية المخصصة لكم.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!-- ✅ العنوان على اليمين -->
+<div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+       2 . أهمية مشروع التخرج: 
+        </h3>
+        </div>
+         </div>
+  <!-- القسم التعليمي -->
+  <div class="importance-container">
+  <div class="importance-section education">
+    <div class="importance-flex">
+      <img src="images/imprtant education.png" alt="تعليم" class="importance-img">
+      <div>
+        <h4>🔹 أولًا: الأهمية التعليمية والأكاديمية</h4>
+        <ul>
+          <li>يُعد مشروع التخرج اختبارًا حقيقيًا لقدرات الطالب من خلال تقييم ما اكتسبه من معارف ومهارات.</li>
+          <li>يتيح تطبيق المعرفة النظرية في واقع عملي من خلال تحليل المشكلات وتقديم حلول مناسبة.</li>
+          <li>يطوّر مهارات البحث والتحليل وينمّي التفكير الناقد والقدرة على اتخاذ القرار والابتكار.</li>
+          <li>يعزز الفهم العميق لمجال محدد ويفتح آفاقًا أوسع للموضوعات التخصصية.</li>
+          <li>يكشف عن القدرات الفردية للطالب في حل المشكلات باستخدام التقنيات أو تطوير حلول جديدة.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- القسم المهني -->
+  <div class="importance-section professional">
+    <div class="importance-flex">
+      <img src="images/important education 2.png" alt="مهني" class="importance-img">
+      <div>
+        <h4>🔹 ثانيًا: الأهمية المهنية وسوق العمل</h4>
+        <ul>
+          <li>يساعد مشروع التخرج الطالب على التهيئة للاندماج في سوق العمل.</li>
+          <li>يكسب الطالب مهارات إدارة الوقت من خلال الالتزام بالعمل ضمن جدول زمني محدد.</li>
+          <li>يساعد على اكتشاف التوجهات المهنية للطالب واتخاذ قرارات مستنيرة بشأن مستقبله.</li>
+          <li>يمثل فرصة لتأسيس مشروع ريادي قد يتطور إلى مشروع تجاري أو خدمة مجتمعية.</li>
+          <li>يسهل الانتقال إلى سوق العمل من خلال التدريب على تنفيذ مشروع متكامل.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- القسم السلوكي -->
+  <div class="importance-section behavioral">
+    <div class="importance-flex">
+      <img src="images/important education3.png" alt="سلوكي" class="importance-img">
+      <div>
+        <h4>🔹 ثالثًا: الأهمية السلوكية والشخصية</h4>
+        <ul>
+          <li>ينمّي الثقة بالنفس ويعزز شعور الطالب بالإنجاز وتحمل المسؤولية.</li>
+          <li>يشجع على الإبداع والابتكار ويدفع الطالب لتطوير أفكار جديدة بأسلوبه الخاص.</li>
+          <li>يعزز قيم الالتزام والانضباط ويعوّد الطالب على العمل المنظم.</li>
+          <li>ينمي روح العمل الجماعي، ويكتسب مهارات التعاون والتنسيق مع الفريق.</li>
+          <li>يرسّخ روح التنافس الإيجابي ويحفّز الطالب على التميز.</li>
+          <li>يدرب الطالب على الاعتماد على الذات في جمع المعلومات وتنظيم العمل.</li>
+          <li>يشبع حب الاستطلاع ويوفر فرصة لاكتشاف موضوعات جديدة وتعميق الرغبة في البحث والتعلم.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.importance-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
+  line-height: 1.8;
+}
+/* أقسام مختلفة بألوان خلفية */
+.importance-section.education { background-color: #f5fafc; }
+.importance-section.professional { background-color: #faf7f3; }
+.importance-section.behavioral { background-color: #fdf6ff; }
+
+.importance-section {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+.importance-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: row; /* الصورة شمال والنص يمين */
+  text-align: right;   /* النص على اليمين */
+}
+
+.importance-img {
+  width: 180px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  order: 0; /* الصورة على الشمال */
+}
+
+.importance-flex div {
+  order: 1; /* النص على اليمين */
+}
+
+.importance-section h4 {
+  color: #0a2afd;
+  margin-bottom: 12px;
+}
+
+.importance-section ul {
+  padding-right: 20px;
+}
+
+.importance-section li {
+  margin: 8px 0;
+}
+
+/* الموبايل */
+@media (max-width: 600px) {
+  .importance-flex {
+    flex-direction: column; /* الصورة فوق النص */
+    align-items: flex-start;
+  }
+  .importance-img { 
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
+  }
+}
+</style>
+<!-- ✅ العنوان -->
+<div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+       3 . أهداف مشروع التخرج: 
+    </h3>
+  </div>
+</div>
+<div class="timeline-container">
+  <div class="timeline-item">
+    <div class="timeline-circle">1</div>
+    <div class="timeline-content">تحليل المشكلات الأكاديمية أو المجتمعية واقتراح حلول عملية ومبتكرة لها.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-circle">2</div>
+    <div class="timeline-content">تطوير مشروع تطبيقي باستخدام التقنيات المناسبة مع مراعاة المعايير الفنية والتربوية.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">3</div>
+    <div class="timeline-content">دمج المعارف والمهارات المكتسبة من المقررات المختلفة وتوظيفها بشكل تكاملي.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">4</div>
+    <div class="timeline-content">تطبيق المعرفة النظرية المكتسبة خلال سنوات الدراسة في مواقف عملية واقعية.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">5</div>
+    <div class="timeline-content">تعزيز مهارات البحث العلمي والتحليل والتفكير النقدي واتخاذ القرار.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">6</div>
+    <div class="timeline-content">تنمية المهارات المهنية مثل التواصل، العمل الجماعي، وإدارة الوقت.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">7</div>
+    <div class="timeline-content">توظيف المهارات الكتابية والعرض التقديمي في إعداد وتوثيق المشروع.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">8</div>
+    <div class="timeline-content">الالتزام بالأخلاقيات المهنية في جميع مراحل تنفيذ المشروع.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">9</div>
+    <div class="timeline-content">تشجيع الابتكار والتفكير الإبداعي من خلال طرح حلول جديدة وغير تقليدية.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">10</div>
+    <div class="timeline-content">تنمية المهارات الفنية والتقنية التي تؤهل الطالب لسوق العمل.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">11</div>
+    <div class="timeline-content">إعداد مشروعات ذات بُعد مجتمعي وتعزيز التواصل مع البيئة المحيطة.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-circle">12</div>
+    <div class="timeline-content">تهيئة الطالب لسوق العمل والتكيف مع بيئات العمل المختلفة والعمل ضمن فريق أو مستقل.</div>
+  </div>
+</div>
+<style>
+.timeline-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.timeline-circle {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  background: #0a2afd;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.timeline-content {
+  background: #f1f1f1;
+  padding: 12px 18px;
+  border-radius: 10px;
+  flex: 1;
+  line-height: 1.6;
+  color: #333;
+}
+/* تدرج الألوان حسب الرقم */
+.timeline-item:nth-child(odd) .timeline-content { background: #f2f8fd; }
+.timeline-item:nth-child(even) .timeline-content { background: #f6f3fe; }
+
+/* الموبايل */
+@media (max-width: 600px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .timeline-circle {
+    margin-bottom: 8px;
+  }
+}
+</style>
+<!-- ✅ العنوان الرئيسي -->
+<div style="text-align: right; margin-bottom: 30px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+       4 . أنواع مشروعات التخرج في تكنولوجيا التعليم:
+    </h3>
+  </div>
+</div>
+  <h4 style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+تتنوع مشروعات التخرج وفقاً لطبيعة المشروع ووفقاً للمنتج التكنولوجي كالتالي:
+</h4>
+<!-- 🎀 التصنيف الأول -->
+<div style="background: linear-gradient(135deg, #a1d1fc, #95f6fb); 
+            color: white; 
+            padding: 15px 20px; 
+            border-radius: 12px; 
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <h3 style="margin: 0;">🔹 أولًا: التصنيف وفقاً لطبيعة المشروع</h3>
+</div>
+<!-- ✅ المشروع التطبيقي -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px;">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- المشروع التطبيقي </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يركّز على تصميم وتنفيذ منتج تعليمي متكامل يخدم أهداف تعليمية محددة. المنتج قد يكون رقميًا (موقع إلكتروني، تطبيق، لعبة، فيديو تفاعلي) أو ماديًا (حقيبة تعليمية، وسائل تعليمية ملموسة).
+    هذه المشروعات تعطي الطالب فرصة لتوظيف مهارات التصميم التعليمي والإنتاج التكنولوجي معًا، وغالبًا ما تكون نواة لمشروعات يمكن تطبيقها فعليًا داخل الفصول الدراسية.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تصميم لعبة تعليمية تفاعلية تساعد تلاميذ المرحلة الابتدائية على تنمية مهارات الحساب.</span>
+  </div>
+</div>
+
+<!-- ✅ مشروع البحث التطبيقي -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروع البحث التطبيقي </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يجمع بين البحث الأكاديمي والتطبيق العملي. والهدف منه ليس فقط إنتاج منتج تعليمي، وإنما اختبار فاعليته على المتعلمين أو بيئة التعلم.
+    الطالب يقوم بجمع بيانات، تحليل نتائج، واستخلاص توصيات يمكن أن تُفيد الباحثين والممارسين في المجال.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">دراسة أثر استخدام بيئة تعلم إلكترونية قائمة على الألعاب في تنمية مهارات التفكير الناقد لدى طلاب الجامعة.</span>
+  </div>
+</div>
+
+<!-- ✅ مشروع التطوير أو التقييم -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px;">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروع التطوير أو التقييم </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يركّز على تحسين منتج أو نظام تعليمي قائم أو تقييمه وفق معايير علمية.
+    غالبًا ما يتضمن هذا النوع إعادة تصميم واجهات أو تحديث محتوى أو قياس جودة بيئة موجودة.
+    هذه المشروعات مفيدة للمؤسسات التعليمية لأنها تقدم حلولًا عملية وقابلة للتنفيذ .
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تقييم مقرر إلكتروني عبر منصة Moodle وقياس مدى ملاءمته لمعايير الجودة التعليمية.</span>
+  </div>
+</div>
+
+<!-- ✅ المشروع البحثي النظري -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px;">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- المشروع البحثي النظري </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يقتصر على الدراسة النظرية والتحليل الأدبي دون إنتاج منتج تطبيقي. الهدف هو إثراء المعرفة الأكاديمية حول موضوع أو قضية في تكنولوجيا التعليم، مثل استراتيجيات التعليم المدمج أو دور الذكاء الاصطناعي في التعليم.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">دراسة نظرية حول التحديات المستقبلية لاستخدام الواقع الافتراضي في التعليم الجامعي.</span>
+  </div>
+</div>
+
+<!-- ✅ مشروع حل المشكلات -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروع حل المشكلات </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يتعامل مع مشكلة واقعية داخل مؤسسة تعليمية ويقترح حلًا تقنيًا أو تربويًا لها.
+    يتطلب هذا النوع مهارات تحليل ميداني، وتوظيف أدوات تكنولوجية لمعالجة القصور أو تحسين الممارسات.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تصميم نظام دعم تعلم إلكتروني لمعالجة ضعف تفاعل الطلاب في الفصول الافتراضية.</span>
+  </div>
+</div>
+
+<!-- ✅ مشروع الخدمة المجتمعية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروع الخدمة المجتمعية </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يهدف إلى خدمة فئات المجتمع المختلفة باستخدام التكنولوجيا التعليمية.
+    هذا النوع يعزز البُعد الإنساني والاجتماعي للمجال، ويعطي الطلاب إحساسًا بالمسؤولية تجاه قضايا المجتمع.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تصميم موارد تعليمية رقمية مخصصة لذوي الإعاقة البصرية.</span>
+  </div>
+</div>
+
+<!-- ✅ المشروع التشاركي -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- المشروعات التشاركية </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    يتم بالتعاون مع جهات تعليمية أو مجتمعية خارجية. غالبًا ما يُنفَّذ ضمن فرق عمل ويخدم احتياجات حقيقية لهذه المؤسسات، مما يتيح خبرة عملية واقعية للطلاب.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">التعاون مع مدرسة لتطوير منصة تعليمية خاصة بها تتضمن موارد رقمية واختبارات تفاعلية.</span>
+  </div>
+</div>
+
+<!-- 🎀 التصنيف الثاني -->
+<div style="background: linear-gradient(135deg, #a1d1fc, #95f6fb); 
+            color: white; 
+            padding: 15px 20px; 
+            border-radius: 12px; 
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <h3 style="margin: 0; ">🔹 ثانيًا: التصنيف حسب نوع المنتج التكنولوجي</h3>
+</div>
+
+<!-- ✅ الوسائط المتعددة التعليمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات تصميم الوسائط المتعددة التعليمية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تهدف إلى إنتاج محتوى تعليمي تفاعلي يجمع بين الصوت، الفيديو، الصور، النصوص، والرسوم المتحركة.
+    تساعد هذه المشروعات في توصيل المفاهيم بشكل جذاب وسهل للمتعلمين.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">إنتاج وحدة تفاعلية لتعليم مفاهيم العلوم للمرحلة الإعدادية باستخدام برنامج Storyline.</span>
+  </div>
+</div>
+
+<!-- ✅ مواقع تعليمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات تطوير مواقع تعليمية إلكترونية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تشمل إنشاء مواقع متكاملة تقدم محتوى، أنشطة، واجبات، واختبارات إلكترونية.
+    تتميز هذه المواقع بسهولة الوصول إليها من أي مكان وتخدم عددًا كبيرًا من المتعلمين.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تصميم موقع لتعليم قواعد النحو العربي يضم دروسًا وأمثلة واختبارات تفاعلية.</span>
+  </div>
+</div>
+
+<!-- ✅ تطبيقات تعليمية للهواتف -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px;">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات تطبيقات تعليمية للهواتف الذكية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تستهدف تصميم تطبيقات تعمل على أنظمة Android أو iOS، تركّز على التعلم الذاتي والمرن.
+    هذه المشروعات تعكس اتجاهًا حديثًا في التعليم حيث يقضي الطلاب وقتًا طويلًا مع أجهزتهم المحمولة.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تطبيق لتعليم جدول الضرب من خلال الألعاب والأنشطة القصيرة.</span>
+  </div>
+</div>
+
+<!-- ✅ أنظمة إدارة التعلم -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات أنظمة إدارة التعلم (LMS)</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تشمل بناء أو تخصيص منصات تعليمية تدير المحتوى، الأنشطة، وتتبع تقدم المتعلمين.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تخصيص منصة Moodle لتدريب المعلمين على استراتيجيات التعليم النشط.</span>
+  </div>
+</div>
+
+<!-- ✅ الواقع الافتراضي والمعزز -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات الواقع الافتراضي والمعزز (VR/AR)</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تعتمد على توظيف تقنيات الواقع الافتراضي أو المعزز لتقديم خبرات تعليمية يصعب تحقيقها بالطرق التقليية.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تصميم تطبيق واقع افتراضي يتيح للطلاب استكشاف معالم مصر القديمة ثلاثية الأبعاد.</span>
+  </div>
+</div>
+
+<!-- ✅ الألعاب التعليمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px;">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات الألعاب التعليمية </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تركّز على تحويل المحتوى الدراسي إلى ألعاب أو توظيف عناصر الألعاب في عملية التعلم.
+  </p>
+ <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">لعبة إلكترونية لتنمية مهارات حل المسائل الرياضية لدى طلاب الصف الثالث الابتدائي.</span>
+  </div>
+</div>
+
+<!-- ✅ الفيديوهات التعليمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات الفيديوهات التعليمية الرقمية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    إنتاج فيديوهات تعليمية باستخدام تقنيات مختلفة (شرح مباشر، رسوم متحركة، موشن جرافيك).
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">إنتاج سلسلة فيديوهات موشن جرافيك حول السلامة الرقمية لطلاب الإعدادية.</span>
+  </div>
+</div>
+
+<!-- ✅ التعلم المدمج -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات بيئات التعلم المدمج </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تجمع بين الحضور الفعلي والدراسة الإلكترونية عبر الإنترنت.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تصميم وحدة تعليمية تجمع بين ورشة عملية وجزء إلكتروني يحتوي على موارد واختبارات.</span>
+  </div>
+</div>
+
+<!-- ✅ أدوات التقييم الإلكتروني -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات أدوات التقييم الإلكتروني </h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تركّز على تصميم اختبارات إلكترونية ذكية قادرة على التصحيح الآلي وتحليل نتائج المتعلمين.
+    هذه المشروعات تساعد في متابعة تقدم الطلاب بشكل فوري وتحسين عملية التقويم.
+  </p>
+ <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تطوير منصة إلكترونية لقياس مهارات التفكير الإبداعي لدى طلاب الجامعة.</span>
+  </div>
+</div>
+
+<!-- ✅ الحقائب التدريبية الرقمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات تصميم الحقائب التعليمية الرقمية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    حقيبة تعليمية متكاملة تحتوي على ملفات وموارد رقمية تغطي موضوعًا محددًا، وتُستخدم في تدريب المعلمين أو المتعلمين.
+    تتضمن عادةً كتيبًا إرشاديًا، عروضًا، فيديوهات، وأنشطة تفاعلية.
+  </p>
+ <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">حقيبة تدريبية رقمية لتأهيل المعلمين على استخدام تطبيقات الذكاء الاصطناعي في التدريس.</span>
+  </div>
+</div>
+
+<!-- ✅ الذكاء الاصطناعي في التعليم -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات الذكاء الاصطناعي وتعلم الآلة في التعليم</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    توظف تقنيات الذكاء الاصطناعي في تخصيص التعلم، تقديم توصيات فردية للمتعلمين،
+    أو تحليل بياناتهم لاكتشاف نقاط القوة والضعف وتحسين تجربة التعلم.
+  </p>
+ <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">تطبيق ذكاء اصطناعي يقترح محتوى تدريبي فردي لكل طالب حسب مستواه.</span>
+  </div>
+</div>
+
+<!-- ✅ البرمجة التعليمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات البرمجة التعليمية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تعتمد على استخدام لغات البرمجة أو الأدوات المرئية مثل Scratch لتصميم برامج أو أنشطة تعليمية.
+    هذه المشروعات تعزز التفكير المنطقي والقدرات التقنية لدى الطلاب.
+  </p>
+ <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">برنامج بلغة Python لتعليم قواعد الجبر للمرحلة الثانوية.</span>
+  </div>
+</div>
+
+<!-- ✅ الكتب الإلكترونية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px;">
+  <h3 style="color: #095ae4; margin-bottom: 8px;"> - مشروعات الكتب الإلكترونية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تهدف إلى إنتاج كتب رقمية تفاعلية تحتوي على نصوص، صور، فيديوهات، وروابط لأنشطة.
+    تساعد على جعل عملية التعلم أكثر تشويقًا وسهولة في الوصول.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">كتاب إلكتروني تفاعلي لتعليم التاريخ باستخدام الصور التوضيحية والاختبارات القصيرة.</span>
+  </div>
+</div>
+
+<!-- ✅ المتاحف الافتراضية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات المتاحف الافتراضية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    تتيح للمتعلمين استكشاف معروضات تاريخية أو علمية من خلال بيئة افتراضية ثلاثية الأبعاد.
+    تضيف عنصر التشويق والإثارة، وتجعل الطلاب يعيشون تجربة تعليمية غامرة.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">متحف افتراضي للآثار المصرية القديمة مع إمكانية التجول التفاعلي.</span>
+  </div>
+</div>
+
+<!-- ✅ القصص الرقمية -->
+<div style=" border: 1px; padding: 15px; border-radius: 10px; ">
+  <h3 style="color: #095ae4; margin-bottom: 8px;">- مشروعات القصص الرقمية</h3>
+  <p style="color: #333; line-height: 1.8; margin: 0;">
+    دمج النصوص، الصور، الصوت، والفيديو لصياغة قصص تعليمية تفاعلية.
+    تساعد على تنمية الخيال، الإبداع، والقيم الأخلاقية لدى المتعلمين.
+  </p>
+  <div style="margin-top: 10px; background: #dfe2fc; border-left: 4px solid #095ae4; padding: 8px 12px; border-radius: 6px;">
+    <span style="font-weight: bold; color: #095ae4;"> مثال:</span>
+    <span style="color: #444;">قصة رقمية تفاعلية لتعليم القيم الأخلاقية للأطفال.</span>
+  </div>
+</div>
+
+
+
+ 
+<!-- ========== نشاط سحب وإفلات مُصلح ومتكامل ========== -->
+<div class="activity-box-wrap">
+  <div class="activity-toggle" role="button" aria-expanded="false" onclick="
+       this.classList.toggle('open'); 
+       const content = this.nextElementSibling;
+       const expanded = this.classList.contains('open');
+       this.setAttribute('aria-expanded', expanded);
+       if(expanded){
+         content.style.maxHeight = content.scrollHeight + 'px';
+       } else {
+         content.style.maxHeight = '0';
+       }
+  ">
+    <span class="title"> نشاط 2: سحب وإفلات  </span>
+    <span class="chev">▼</span>
+  </div>
+
+  <div class="activity-content" style="max-height:0; overflow:hidden; transition:max-height 0.36s ease;">
+    <div class="activity-content-inner">
+
+      <p><strong>اسحب كل مشروع إلى النوع الصحيح:</strong></p>
+
+      <div style="display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;">
+       <!-- المشاريع (صفين أفقيين) -->
+<div id="projects" style="display:flex; flex-direction:column; gap:8px;">
+  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+    <div id="item1" draggable="true" class="drag-item" data-match="1">فيديوهات تعليمية رقمية </div>
+    <div id="item4" draggable="true" class="drag-item" data-match="2">مشروعات بحثية</div>
+    <div id="item3" draggable="true" class="drag-item" data-match="1">القصص لرقمية </div>
+    <div id="item2" draggable="true" class="drag-item" data-match="2">مشروعات حل المشكلات </div>
+    <div id="item2" draggable="true" class="drag-item" data-match="2">مشروعات الخدمة المجتمعية  </div>
+   <div id="item1" draggable="true" class="drag-item" data-match="1">الواقع المعزز </div>
+
+  </div>
+</div>
+
+        <!-- الأنواع (أفقية جنب بعض) -->
+<div id="types" style="display:flex; flex-direction:row; gap:12px;">
+  <div data-match="1" class="drop-zone"> مشروعات وفقاً للمنتج التكنولوجي</div>
+  <div data-match="2" class="drop-zone"> مشروعات وفقاً لطبيعة المشروع</div>
+</div>
+
+      </div>
+
+      <div id="feedbackProjects" class="feedback" aria-live="polite" style="margin-top:12px;"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* خليك محتفظة بتنسيقاتك العامة؛ هذه إضافات صغيرة لتنسيق العناصر داخل النشاط */
+.activity-box-wrap { margin:20px 0; }
+.activity-toggle { background:#ffeb3b; color:#095ae4; padding:12px 16px; border-radius:10px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+.activity-content-inner { padding:12px 0; font-family:'Cairo',sans-serif; }
+.drag-item {
+  width:150px;
+  padding:10px;
+  border:2px solid #095ae4;
+  border-radius:8px;
+  background:#f5e6ff;
+  cursor:grab;
+  text-align:center;
+  user-select:none;
+}
+.drag-item[draggable="false"] { opacity:0.7; cursor:default; }
+.drop-zone {
+ min-width: 400px;   /* هنا العرض الأدنى */
+  min-height: 250px;  /* هنا الطول الأدنى */
+  padding: 15px;     
+  border:2px dashed #095ae4;
+  border-radius:10px;
+  background:#fff7e6;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items:center;
+  justify-content:flex-start;
+  transition:all 0.18s ease;
+  box-sizing:border-box;
+}
+.drop-zone.correct { background:#e6ffef; border-color:#2ecc71; }
+.drop-zone.wrong { animation:shake 0.36s; border-color:#ff6b6b; }
+@keyframes shake{ 0%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}100%{transform:translateX(0)} }
+
+.feedback { font-weight:700; color:#333; min-height:24px; }
+</style>
+
+<script>
+(function(){
+  const draggables = document.querySelectorAll('#projects .drag-item');
+  const dropzones = document.querySelectorAll('.drop-zone');
+  const feedback = document.getElementById('feedbackProjects');
+
+  let dragId = null;        // id of dragging element
+  let draggedEl = null;     // reference to element being dragged
+
+  // drag start
+  draggables.forEach(el=>{
+    el.addEventListener('dragstart', e=>{
+      dragId = e.target.id;
+      draggedEl = e.target;
+      // set effect
+      try { e.dataTransfer.setData('text/plain', dragId); } catch(err){}
+      // small visual cue
+      e.target.classList.add('dragging');
+    });
+    el.addEventListener('dragend', e=>{
+      e.target.classList.remove('dragging');
+      // reset vars (if item wasn't appended to new place, browser leaves original)
+      dragId = null;
+      draggedEl = null;
+    });
+  });
+
+  // allow drops + handle drop
+  dropzones.forEach(zone=>{
+    zone.addEventListener('dragover', e=> e.preventDefault());
+    zone.addEventListener('dragenter', e=> { e.preventDefault(); zone.classList.add('valid'); });
+    zone.addEventListener('dragleave', e=> { zone.classList.remove('valid'); });
+
+    zone.addEventListener('drop', e=>{
+      e.preventDefault();
+      zone.classList.remove('valid');
+      // try to get id from dataTransfer; fallback to our stored var
+      let id = null;
+      try { id = e.dataTransfer.getData('text/plain'); } catch(err){}
+      if(!id && dragId) id = dragId;
+      if(!id) return;
+
+      const item = document.getElementById(id);
+      if(!item) return;
+
+      const itemMatch = item.dataset.match;
+      const zoneMatch = zone.dataset.match;
+
+      if(itemMatch === zoneMatch){
+        // correct -> append, mark, disable drag
+        zone.appendChild(item);
+        item.setAttribute('draggable','false');
+        item.style.cursor = 'default';
+        zone.classList.add('correct');
+        feedback.textContent = '✅ الإجابة صحيحة';
+        feedback.style.color = 'green';
+        // remove green after short delay
+        setTimeout(()=> zone.classList.remove('correct'), 900);
+      } else {
+        // wrong -> shake zone (item stays where it was)
+        zone.classList.add('wrong');
+        feedback.textContent = '❌ خاطئ — حاول مرة أخرى';
+        feedback.style.color = 'red';
+        setTimeout(()=> {
+          zone.classList.remove('wrong');
+          feedback.textContent = '';
+        }, 900);
+      }
+    });
+  });
+
+})();
+</script>
+ <br>
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+    5. الشروط الواجب توافرها في مشروع التخرج:  
+  </h3>
+</div>
+
+<div style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+تختلف مشروعات التخرّج عن المقررات الدراسية التقليدية بطبيعتها الإبداعية والتطبيقية، ويُشترط لنجاحها الالتزام بمجموعة من الشروط الأساسية التي تضمن جودة المخرجات وتحقيق الأهداف المرجوة،
+ومن أبرزها ست نقاط مهمة ورئيسية يمكنك دراستها من خلال الفيديو المعروض أمامك:
+</div>
+   
+<!-- صورة تشغيل الفيديو -->
+<div class="video-container" onclick="openInnerVideo1()">
+  <img src="images/watch.png" alt="عرض الفيديو">
+  <div class="play-button"></div>
+</div>
+
+<!-- نافذة الفيديو -->
+<div class="video-popup" id="videoPopupInner1" 
+     style="position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:1000;">
+  <div style="position:relative; max-width:800px; width:90%;">
+    <!-- زر الإغلاق -->
+    <span onclick="closeInnerVideo1()" 
+          style="position:absolute; top:-35px; right:-10px; font-size:28px; color:#fff; cursor:pointer;">✖</span>
+
+    <video id="popupInnerVideo1" controls preload="none" style="width:100%; border-radius:10px;">
+      <source src="videos/V3.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+</div>
+
+<script>
+function openInnerVideo1() {
+  const popup = document.getElementById("videoPopupInner1");
+  const video = document.getElementById("popupInnerVideo1");
+  popup.style.display = "flex";
+  video.play();
+}
+
+function closeInnerVideo1() {
+  const popup = document.getElementById("videoPopupInner1");
+  const video = document.getElementById("popupInnerVideo1");
+  popup.style.display = "none";
+  video.pause();
+  video.currentTime = 0;
+}
+
+// ✅ إغلاق تلقائي عند انتهاء الفيديو
+document.getElementById("popupInnerVideo1").addEventListener("ended", function() {
+  closeInnerVideo1();
+});
+</script>
+
+  </div>
+  </div>
+
+<br>
+
+<!-- ✅ العنوان على اليمين -->
+<div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+       6. خصائص مشروع التخرج الجيد: 
+    </h3>
+  </div>
+</div>
+  <h5 style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+تعكس خصائص مشروع التخرج الجيد  فائدته التطبيقية والأكاديمية، ومنها :   </h5>
+<!-- ✅ الصورتين في المنتصف -->
+<div style="border-right:4px solid #3498db; 
+              margin:20px auto; 
+              padding-right:20px; 
+              max-width:1500px; 
+              direction:rtl; 
+              text-align:right; 
+              font-family:'Cairo', sans-serif;
+              margin-right:40px;"> 
+
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- وضوح الفكرة وارتباطها بالتخصص</h4>
+      <p style="margin:0; color:#555;">أن تكون فكرة مشروع التخرج واضحة ومحددة، ترتبط بتخصص الطالب، وتعالج مشكلة واقعية أو تقدم حلًا مبتكرًا، مع الواقعية والحداثة والقدرة على التنفيذ.</p>
+    </div>
+    
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- الأصالة والإبداع</h4>
+      <p style="margin:0; color:#555;">أن يتضمن مشروع التخرج  عنصرًا جديدًا أو تطويرًا لفكرة قائمة، بعيدًا عن النسخ، ويعكس قدرة الطالب على التفكير النقدي والتحليل والابتكار.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- أهداف واضحة ومحددة</h4>
+      <p style="margin:0; color:#555;">أن يتضمن مشروع التخرج  أهدافًا قابلة للملاحظة والقياس خلال المدة المحددة، تعكس نتائج واقعية، وتسهم في تطوير المعرفة وحل المشكلات.</p>
+    </div>
+    <div style="color:#2980b9;">
+      <h4 style="color:#0588df;">- خطة تنفيذ واضحة وتنظيم فعّال</h4>
+      <p style="margin:0; color:#555;">أن يحتوي مشروع التخرج على خطة تفصيلية لمراحله، مع توزيع المهام بدقة، وإدارة الوقت والموارد بكفاءة باستخدام مهارات التخطيط والتنظيم.</p>
+    </div>
+    <div style="color:#2980b9;">
+      <h4 style="color:#0588df;">- المنهجية العلمية</h4>
+      <p style="margin:0; color:#555;">أن يلتزم مشروع التخرج  بخطوات منهجية (بحث – تصميم – تطوير)، باستخدام أدوات وطرق تحليل دقيقة، مع توثيق كل المراحل والنتائج بشكل علمي منظم.</p>
+    </div>
+    <div style="color:#2980b9;">
+      <h4 style="color:#0588df;">- قابلية التطبيق</h4>
+      <p style="margin:0; color:#555;">أن يكون مشروع التخرج  قابلًا للتنفيذ في بيئة حقيقية، يراعي الإمكانات المتاحة واحتياجات المجتمع، ويقدّم نموذجًا أوليًا أو تجربة عملية تثبت فاعليته.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- الالتزام بالجدول الزمني</h4>
+      <p style="margin:0; color:#555;">أن ينفذ مشروع التخرج  ضمن خطة زمنية واضحة تشمل الإعداد، التنفيذ، التقييم، وتسليم النتائج النهائية في الموعد المحدد.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- جودة المحتوى والتحليل</h4>
+      <p style="margin:0; color:#555;">أن يعتمد مشروع التخرج على مصادر علمية موثوقة، ويحتوي على تحليل منطقي للبيانات، ربط بالإطار النظري، ومعلومات دقيقة مدعومة بالأدلة.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- توثيق علمي شامل</h4>
+      <p style="margin:0; color:#555;">أن يضم مشروع التخرج  قائمة مراجع حديثة وملحقات (جداول، صور، رسوم)، وتوثيق جميع الخطوات باستخدام قوالب أكاديمية منسقة ومعتمدة.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- عرض احترافي وتنسيق جيد</h4>
+      <p style="margin:0; color:#555;">أن يكون مشروع التخرج منسقًا علميًا من حيث التصميم والترتيب والخط، ويحتوي على ملخص، مقدمة، أهداف، منهجية، نتائج، مناقشة، وتوصيات.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- توظيف التقنية الحديثة</h4>
+      <p style="margin:0; color:#555;">أن يستخدم مشروع التخرج أدوات وتقنيات رقمية حديثة، مثل برمجيات تعليمية متقدمة، لإنتاج منتج رقمي متكامل يعكس مهارات تقنية عالية.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;">- العمل الجماعي والقيادة</h4>
+      <p style="margin:0; color:#555;">أن يتسم مشروع التخرج بروح التعاون، توزيع الأدوار بوضوح، إدارة الفريق بفاعلية، مع مهارات اتخاذ القرار وحل المشكلات بشكل جماعي.</p>
+    </div>
+    <div style="margin-bottom:20px;">
+      <h4 style="color:#0588df;"> - تصميم تعليمي منظم</h4>
+      <p style="margin:0; color:#555;">أن يشمل مشروع التخرج سيناريو تعليمي متكامل، وسائط تفاعلية وواجهات مناسبة، وينتج منتجًا نهائيًا (وحدة، لعبة، تطبيق، تقرير) قابلًا للعرض أو النشر.</p>
+    </div>
+  </div>
+<br>
+
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+    7. المهارات الأساسية لمشروع التخرج:  
+  </h3>
+</div>
+
+<!--  رحلة مشروع التخرج -->
+<style>
+   
+</style>
+
+<div class="grad-roadmap">
+   <div style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+ينبغي أن يمتلك طالب تكنولوجيا التعليم مجموعة من المهارات المتنوعة التي تُمكّنه من تنفيذ مشروع التخرج بكفاءة وفاعلية ومنها :  <br>
+من خلال النقر علي كل مهارة ستظهر لك تفصيلياً :👇🏻
+            </div>
+
+    <div class="grad-roadmap-container">
+    <!-- ✅ شبكة 3 في الصف الأول و 2 في الصف الثاني -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; direction: rtl;">
+
+  <!-- أولاً: المهارات التخطيطية العامة -->
+  <div class="grad-station" onclick="gradToggleDetails(this)" 
+       style="border-right:6px solid #095ae4; background:#fff; padding:15px; border-radius:10px;">
+    <h4 style="color:#095ae4; margin:0 0 10px 0;">أولاً: المهارات التخطيطية العامة لمشروع التخرج</h4>
+    <div class="grad-details" style="margin-top:10px; display:none;">
+      <ul style="line-height:2; color:#333; padding-right:20px; margin:0;">
+        <li>العمل ضمن فريق مشروع التخرج.</li>
+        <li>إدارة الوقت والموارد لمشروع التخرج.</li>
+        <li>اختيار فكرة مشروع التخرج.</li>
+        <li>تحليل الاحتياجات التعليمية لمشروع التخرج.</li>
+        <li>تحديد أهداف مشروع التخرج.</li>
+        <li>تجميع المحتوى التعليمي لمشروع التخرج.</li>
+        <li>إعداد الإطار النظري لمشروع التخرج.</li>
+        <li>إعداد خطة تنفيذ مشروع التخرج.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ثانياً: المهارات التصميمية -->
+  <div class="grad-station" onclick="gradToggleDetails(this)" 
+       style="border-right:6px solid #095ae4; background:#fff; padding:15px; border-radius:10px;">
+    <h4 style="color:#095ae4; margin:0 0 10px 0;">ثانياً: المهارات التصميمية لمشروع التخرج</h4>
+    <div class="grad-details" style="margin-top:10px; display:none;">
+      <ul style="line-height:2; color:#333; padding-right:20px; margin:0;">
+        <li>تصميم المحتوى التعليمي لمشروع التخرج.</li>
+        <li>تصميم سيناريو مشروع التخرج.</li>
+        <li>تصميم النموذج الأولي لمشروع التخرج.</li>
+        <li>تصميم الوسائط التعليمية لمشروع التخرج.</li>
+        <li>تصميم واجهات التفاعل لمشروع التخرج.</li>
+        <li>تصميم بيئة التعلم الخاصة بمشروع التخرج.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ثالثاً: المهارات التقنية -->
+  <div class="grad-station" onclick="gradToggleDetails(this)" 
+       style="border-right:6px solid #095ae4; background:#fff; padding:15px; border-radius:10px;">
+    <h4 style="color:#095ae4; margin:0 0 10px 0;">ثالثاً: المهارات التقنية لإنتاج عناصر مشروع التخرج</h4>
+    <div class="grad-details" style="margin-top:10px; display:none;">
+      <ul style="line-height:2; color:#333; padding-right:20px; margin:0;">
+        <li>توظيف المستحدثات التكنولوجية لإنتاج عناصر مشروع التخرج.</li>
+        <li>استخدام البرمجيات التعليمية لإنتاج عناصر مشروع التخرج.</li>
+        <li>الإنتاج الرقمي لعناصر مشروع التخرج.</li>
+        <li>برمجة عناصر مشروع التخرج.</li>
+        <li>العرض الأولي للعناصر المنتجة لمشروع التخرج.</li>
+        <li>اختبار وتقييم العناصر المنتجة لمشروع التخرج.</li>
+        <li>مراجعة وتحسين العناصر المنتجة لمشروع التخرج.</li>
+        <li>تعديل المنتج النهائي لعناصر مشروع التخرج.</li>
+        <li>إنتاج النسخة النهائية من مشروع التخرج.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- رابعاً: مهارات إعداد دليل المشروع -->
+  <div class="grad-station" onclick="gradToggleDetails(this)" 
+       style="border-right:6px solid #095ae4; background:#fff; padding:15px; border-radius:10px;">
+    <h4 style="color:#095ae4; margin:0 0 10px 0;">رابعاً: مهارات إعداد دليل مشروع التخرج</h4>
+    <div class="grad-details" style="margin-top:10px; display:none;">
+      <ul style="line-height:2; color:#333; padding-right:20px; margin:0;">
+        <li>إعداد الشكل العام لدليل مشروع التخرج.</li>
+        <li>تنظيم عناصر دليل مشروع التخرج.</li>
+        <li>عرض خطوات تنفيذ مشروع التخرج داخل الدليل.</li>
+        <li>إدراج النماذج والقوالب لمشروع التخرج.</li>
+        <li>الإخراج الفني لدليل مشروع التخرج.</li>
+        <li>توثيق مراحل مشروع التخرج.</li>
+        <li>إعداد دليل استخدام مشروع التخرج.</li>
+        <li>إخراج دليل مشروع التخرج بصيغ متعددة للنشر.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- خامساً: مهارات العرض والمناقشة -->
+  <div class="grad-station" onclick="gradToggleDetails(this)" 
+       style="border-right:6px solid #095ae4; background:#fff; padding:15px; border-radius:10px;">
+    <h4 style="color:#095ae4; margin:0 0 10px 0;">خامساً: مهارات عرض ومناقشة مشروع التخرج</h4>
+    <div class="grad-details" style="margin-top:10px; display:none;">
+      <ul style="line-height:2; color:#333; padding-right:20px; margin:0;">
+        <li>تقديم العرض النهائي لمشروع التخرج.</li>
+        <li>مناقشة مشروع التخرج.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- ✅ Script -->
+<script>
+  function gradToggleDetails(el) {
+    const details = el.querySelector(".grad-details");
+    details.style.display = details.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</div>
+  </div>
+  </div>
+  </div>
+
+ 
+<br>
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+     8.   نصائح اختيار مشروع التخرج: 
+  </h3>
+</div>
+</div>
+</div>
+   <div style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+ مشروع التخرج خطوة مهمة وعليك الالتزام بالنصائح المقدمة لك من خلال الضغط علي كل عنوان النصيحة: 
+</div>
+
+<div class="tips-grid">
+  <div class="tip-box active" data-idx="0">
+    <i class='bx bx-bulb icon'></i>
+    <div class="label">فكرة مشروع التخرج</div>
+  </div>
+  <div class="tip-box" data-idx="1">
+    <i class='bx bx-time icon'></i>
+    <div class="label">التخطيط الزمني لمشروع التخرج </div>
+  </div>
+  <div class="tip-box" data-idx="2">
+    <i class='bx bx-group icon'></i>
+    <div class="label">فريق مشروع التخرج </div>
+  </div>
+  <div class="tip-box" data-idx="3">
+    <i class='bx bx-user-voice icon'></i>
+    <div class="label">مشرف مشروع التخرج</div>
+  </div>
+  <div class="tip-box" data-idx="4">
+    <i class='bx bx-check-shield icon'></i>
+    <div class="label">مراجعة وتطوير مشروع التخرج</div>
+  </div>
+</div>
+
+<div class="tip-detail" id="tipDetailBox">
+  <h3 id="tipTitle">فكرة مشروع التخرج</h3>
+  <p id="tipText"> احرص على اختيار فكرة مشروع تخرج تُبرز إبداعك وابتكارك، وتعكس ما اكتسبته من معارف خلال سنوات دراستك الجامعية، واختر الفكرة قائمة على أساس علمي،  بحيث تساعدك على تنفيذ مشروع متميز يتجاوز حدود العمل الروتيني،و  تذكّر  دائماً أن مشروعك سيُعرض أمام أعضاء هيئة التدريس وزملائك، لذلك يجب أن يكون ذا قيمة علمية واضحة وفائدة عملية للمجتمع. كما يُفضل أن تركز على النتائج المتوقعة التي تسهم في رفع مستواك الأكاديمي وتطوير خبراتك المستقبلية.</p>
+</div>
+
+<script>
+const tipsData = [
+  {title:'فكرة مشروع التخرج', text:'   احرص على اختيار فكرة مشروع تخرج تُبرز إبداعك وابتكارك، وتعكس ما اكتسبته من معارف خلال سنوات دراستك الجامعية، واختر الفكرة قائمة على أساس علمي  بحيث تساعدك على تنفيذ مشروع متميز يتجاوز حدود العمل الروتيني، وتذكّر دائماً أن مشروعك سيُعرض أمام أعضاء هيئة التدريس وزملائك، لذلك يجب أن يكون ذا قيمة علمية واضحة وفائدة عملية للمجتمع. كما يُفضل أن تركز على النتائج المتوقعة التي تسهم في رفع مستواك الأكاديمي وتطوير خبراتك المستقبلية.'},
+  {title:'التخطيط الزمني لمشروع التخرج ', text:' ضع خطة زمنية واضحة لمراحل مشروع التخرج، والتزم بتنفيذها بدقة، والتنظيم الجيد للوقت يساعدك على إنجاز كل مرحلة دون تأخير، ويضمن قبول مشروعك في المدة الزمنية المحددة. .'},
+  {title:'فريق مشروع التخرج ', text:'اختر فريق مشروعك بعناية، ولا تعتمد على الصداقة فقط، واحرص أن يكون زملاؤك ملتزمين، لأن أي تقصير من أحد الأعضاء قد يؤثر على الجميع. قبل أن تحسم اختيارك.'},
+  {title:' مشرف مشروع التخرج ', text:'احرص على التعاون الفعّال مع مشرف مشروع التخرج، وتواصلك المستمر معه يساعدك على الاستفادة من خبراته وتجاوز العقبات في مختلف مراحل المشروع، يجب أن تكون مرنًا في التعامل، وتقبّل ملاحظاته بصدر رحب، فذلك يثري عملك ويعزز من جودة النتائج التي ستحققها.'},
+  {title:'مراجعة وتطوير مشروع التخرج', text:'راجع المشروع بانتظام وعدّل الأخطاء مبكرًا، مع تحسين النتائج قبل العرض النهائي.'}
+];
+
+function playTone(freq=880,duration=0.07){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    const o=ctx.createOscillator();const g=ctx.createGain();
+    o.type='sine';o.frequency.value=freq;o.connect(g);g.connect(ctx.destination);
+    g.gain.value=0.001;o.start();
+    g.gain.exponentialRampToValueAtTime(0.08,ctx.currentTime+0.01);
+    g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+duration);
+    o.stop(ctx.currentTime+duration+0.02);
+  }catch(e){}
+}
+
+const boxes=document.querySelectorAll('.tip-box');
+const tipTitle=document.getElementById('tipTitle');
+const tipText=document.getElementById('tipText');
+
+boxes.forEach((box,idx)=>{
+  box.addEventListener('click',()=>{
+    boxes.forEach(b=>b.classList.remove('active'));
+    box.classList.add('active');
+    tipTitle.textContent=tipsData[idx].title;
+    tipText.textContent=tipsData[idx].text;
+    playTone(800-idx*60,0.08);
+  });
+});
+</script>
+<!-- ========== نهاية النصائح ========= -->
+ <br>
+
+
+<div class="activity-box-wrap">
+  <div class="activity-toggle" onclick="toggleActivity(this)">
+    <span class="title"> نشاط 3: اختر الإجابة الصحيحة من بين الخيارت المتاحة لك فيما يلي:</span>
+    <span class="chev">▼</span>
+  </div>
+  <div class="activity-content">
+    <div class="activity-content-inner">
+
+      <!-- السؤال 1 -->
+      <p><strong>السؤال 1:</strong> أن يكون مشروع التخرج عنصرًا مبتكرًا أو تطويرًا لفكرة تعليمية قائمة قابلة للتجديد تعني ........</p>
+      <label><input type="radio" name="q1" value="0"> قابلية التطبيق</label><br>
+      <label><input type="radio" name="q1" value="0"> وضوح الفكرة</label><br>
+      <label><input type="radio" name="q1" value="1"> الأصالة والابتكار</label><br>
+      <button class="check-btn" onclick="checkMCQ('q1','1','f1')">تحقق من الإجابة</button>
+      <div id="f1" class="feedback"></div>
+      <hr>
+
+      <!-- السؤال 2 -->
+      <p><strong>السؤال 2:</strong> تكمن الأهمية التعليمية لمشروع التخرج في أنه ...........</p>
+      <label><input type="radio" name="q2" value="1"> اختبار حقيقي لقدرات الطالب وتطبيق المعرفة النظرية في موقف عملي.</label><br>
+      <label><input type="radio" name="q2" value="0"> تقليل العبء الدراسي في المقررات.</label><br>
+      <label><input type="radio" name="q2" value="0"> التركيز على العرض فقط دون محتوى علمي.</label><br>
+      <button class="check-btn" onclick="checkMCQ('q2','1','f2')">تحقق من الإجابة</button>
+      <div id="f2" class="feedback"></div>
+      <hr>
+
+      <!-- السؤال 3 -->
+      <p><strong>السؤال 3:</strong> يهدف مشروع التخرج إلى ..........</p>
+      <label><input type="radio" name="q3" value="0"> تقليل التواصل مع سوق العمل.</label><br>
+      <label><input type="radio" name="q3" value="1"> تعزيز قدرة الطالب على تطبيق ما تعلمه عمليًا.</label><br>
+      <label><input type="radio" name="q3" value="0"> توفير بديل عن الاختبارات النهائية.</label><br>
+      <button class="check-btn" onclick="checkMCQ('q3','1','f3')">تحقق من الإجابة</button>
+      <div id="f3" class="feedback"></div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function checkMCQ(questionName, correctAnswer, feedbackId) {
+  let selected = document.querySelector(`input[name="${questionName}"]:checked`);
+  let feedback = document.getElementById(feedbackId);
+
+  if (!selected) {
+    feedback.innerHTML = "⚠️ من فضلك اختر إجابة أولاً";
+    feedback.style.color = "orange";
+    return;
+  }
+
+  if (selected.value === correctAnswer) {
+    feedback.innerHTML = "✅ إجابة صحيحة";
+    feedback.style.color = "green";
+  } else {
+    feedback.innerHTML = "❌ إجابة خاطئة";
+    feedback.style.color = "red";
+  }
+}
+</script>
+
+
+
+  <br>   
+
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+    9. الأطراف المشاركة في مشروع التخرج وأدوارهم:  
+  </h3>
+</div>
+  <div style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+      قم بالنقر عل كل شخصية ليظهر دورها :
+    </div>
+  <div class="avatar-row">
+  <div class="avatar-img">
+    <img src="images/student-avatar.png" alt="مشرف">
+    <p class="avatar-name">الطالب </p>
+  </div>
+    <p class="role-description">
+<span>
+ الطالب   <br>
+ </span>
+المنفذ الرئيسي للمشروع، وقد يعمل ضمن فريق بقيادة أحد الأعضاء.
+    <br><br>
+    <span>الأدوار الأساسية:</span><br>
+    <strong>التخطيط :</strong> اختيار فكرة مناسبة، تحديد الأهداف، وإعداد خطة عمل.<br>
+    <strong>التنفيذ :</strong>  جمع البيانات، تطوير النموذج أو الحل، وتوثيق خطوات العمل.<br>
+    <strong>التقييم:</strong> 	اختبار المنتج، تحليل النتائج، وتحسين المشروع.<br>
+    <strong>التقرير والعرض :</strong>إعداد التقرير النهائي، تحضير العرض التقديمي، والمناقشة أمام اللجنة.<br>
+    <strong>الالتزامات الأخلاقية  :</strong>الالتزام بأخلاقيات البحث، تنظيم الوقت، والتواصل المستمر مع المشرف.<br>
+  </p>
+</div>
+  <div class="avatar-row">
+  <div class="avatar-img">
+    <img src="images/supervisor afatar.png" alt="مشرف">
+    <p class="avatar-name">المشرف  </p>
+  </div>
+  <p class="role-description">
+<span>
+ المشرف    <br>
+ </span>
+    عضو هيئة التدريس  الذي يوجّه ويقيّم مشروع التخرج، ويمثل ركيزة أساسية لضمان جودة التنفيذ.
+    <br><br>
+    <span>الأدوار الأساسية:</span><br>
+    <strong>التوجيه الأكاديمي:</strong> مساعدة في اختيار الفكرة، وضع الخطة، وتحديد المصادر والأدوات.<br>
+    <strong>المتابعة والتقويم:</strong> لقاءات دورية، مراجعة العمل، وتصحيح الأخطاء العلمية والمنهجية.<br>
+    <strong>الدعم:</strong> تعزيز التفكير النقدي، المساعدة في تحليل النتائج، وإعداد التقرير النهائي.<br>
+    <strong>التقييم والتحكيم:</strong> إبداء الملاحظات، المشاركة في المناقشة، وإعداد تقارير التقييم.<br>
+  </p>
+</div>
+
+  <div class="avatar-row">
+  <div class="avatar-img">
+    <img src="images/monadek.png" alt="مشرف">
+    <p class="avatar-name">منسق المشروعات  </p>
+  </div>
+    <p class="role-description">
+<span>
+منسق مشروعات التخرج 
+  <br>
+ </span>
+مسؤول أكاديمي وإداري يدير مشروعات التخرج على مستوى الكلية، ويربط بين الطلاب والمشرفين والجهات المعنية.
+    <br><br>
+    <span>الأدوار الأساسية:</span><br>
+    <strong>التخطيط والتنظيم  :</strong> وضع خطة العمل، توزيع المهام، وضبط الجدول الزمني.<br>
+    <strong>التواصل والتنسيق  :</strong>  تسهيل الاجتماعات، التنسيق مع المشرفين، وإرسال الإشعارات.<br>
+    <strong>حل المشكلات :</strong>معالجة العقبات وضمان سير العمل بسلاسة. <br>
+    <strong>التوثيق والجودة  :</strong> حفظ مراحل المشروع ومراجعة المخرجات قبل التقييم.<br>
+    <strong>العروض النهائية    :</strong> تنظيم العرض التقديمي والمواد المصاحبة.<br>
+  </p>
+</div>
+</div>
+  </div>
+
+    <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+       10. أخلاقيات العمل في مشروع التخرج :
+    </h3>
+  </div>
+  
+
+<h3 style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+ 
+ يجب على طلاب تكنولوجيا التعليم الالتزام بمجموعة من القيم والمبادئ الأخلاقية خلال إعداد مشروع التخرج، لضمان المصداقية، ومنها:
+
+
+<!-- ✅ صورة واحدة مع عنوان -->
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <div class="zoom-wrapper" style="position: relative; display: inline-block;">
+   <img src="images/akhlak.png" class="zoomable second" 
+     style="width: 800px; max-width: 100%; border-radius: 10px; cursor: zoom-in;">
+  </div>
+</div>
+
+<br>
+
+
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+    11. علاقة مشروعات التخرج بسوق العمل :  
+  </h3>
+</div>
+
+<h3 style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+يُعد مشروع التخرج حلقة الوصل بين التعليم الأكاديمي وسوق العمل. و يُعد أداة فعالة لإبراز كفاءات الطالب واستعداده للاندماج في الحياة المهنية، سواء من خلال التوظيف أو ريادة الأعمال.<!-- ====== قسم أهمية مشروع التخرج وسوق العمل ====== -->
+
+<!-- ====== قسم أهمية مشروع التخرج وسوق العمل ====== -->
+<div style="display:flex; flex-direction:column; gap:0; margin-top:20px; direction:rtl;">
+
+  <!-- بطاقة 1 -->
+  <div style="display:flex; align-items:center; gap:30px; flex-direction:row-reverse; background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+     <div style="text-align:center; min-width:220px;">
+      <img src="images/job.jpg" alt="فرص التوظيف" style="width:220px; border-radius:15px;">
+      <div style="margin-top:10px; font-weight:bold; color:#095ae4; font-size:18px;">تعزيز فرص التوظيف</div>
+    </div>
+    <!-- النص -->
+    <div style="flex:1; font-size:18px; line-height:2; font-family:'Cairo','Simplified Arabic',Tahoma,sans-serif; color:#333; text-align:right;">
+      <h5 style="color:#095ae4; font-size:18px;">أولًا: أهمية مشروع التخرج في تعزيز فرص التوظيف:</h5>
+      <p>
+         - عرض مشروع التخرج في المقابلات المهنية:
+        حيث يمكن للطالب الاستعانة بمشروع التخرج كمثال عملي على مهاراته في التخطيط والتنفيذ وحل المشكلات، ويعد المشروع مرآة لإمكاناته التطبيقية مما يمنح انطباعًا قويًا لدى جهات التوظيف.<br><br>
+       - مشروع التخرج دليل على المهارات العملية:
+        من خلال اهتمام أصحاب العمل بمشروعات التخرج لأنها تعد دليلاً عمليًا على مهارات الابتكار، والإبداع، والعمل الجماعي، والقدرة على الإنجاز تحت الضغط.
+      </p>
+    </div>
+  </div>
+
+  <!-- بطاقة 2 -->
+  <div style="display:flex; align-items:center; gap:30px; flex-direction:row-reverse; background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+    <!-- الصورة + الاسم -->
+    <div style="text-align:center; min-width:220px;">
+      <img src="images/startup.jpg" alt="ريادة الأعمال" style="width:220px; border-radius:15px;">
+      <div style="margin-top:10px; font-weight:bold; color:#095ae4; font-size:18px;">بداية لمشروع ريادي</div>
+    </div>
+    <!-- النص -->
+    <div style="flex:1; font-size:18px; line-height:2; font-family:'Cairo','Simplified Arabic',Tahoma,sans-serif; color:#333; text-align:right;">
+      <h5 style="color:#095ae4; font-size:18px;">ثانيًا: مشروع التخرج كبداية لمشروع ريادي أو تجاري:</h5>
+      <p>
+       - تحويل المشروع إلى منتج رقمي قابل للتسويق
+        مثل: تطبيقات تعليمية، ألعاب تفاعلية، وحدات إلكترونية، أو أنظمة إدارة تعلم.<br><br>
+       -  الاستفادة من المشروع في المسابقات والمبادرات، 
+        يمكن التقديم بمشروعات التخرج في
+         مسابقات الابتكار التربوي،
+        معارض مشاريع التخرج الجامعية، 
+        برامج حاضنات الأعمال مثل "فكرتك شركتك".
+      </p>
+    </div>
+  </div>
+
+  <!-- بطاقة 3 -->
+  <div style="display:flex; align-items:center; gap:30px; flex-direction:row-reverse; background:#f9f9f9; padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+     <!-- الصورة + الاسم -->
+    <div style="text-align:center; min-width:220px;">
+      <img src="images/research.jpg" alt="الدراسات العليا" style="width:220px; border-radius:15px;">
+      <div style="margin-top:10px; font-weight:bold; color:#095ae4; font-size:18px;">تمهيد للدراسات العليا</div>
+    </div>
+       <!-- النص -->
+    <div style="flex:1; font-size:18px; line-height:2; font-family:'Cairo','Simplified Arabic',Tahoma,sans-serif; color:#333; text-align:right;">
+      <h5 style="color:#095ae4; font-size:18px;">
+        ثالثًا: التمهيد للدراسات العليا والبحث العلمي: </h5>
+      <p>
+      -	تطوير المشروع ليصبح بحثًا علميًا متقدمًا،
+  	   وإذا  كان المشروع مبنيًا على أسس علمية قوية، يمكن تطويره لاحقًا إلى 
+رسالة ماجستير أو 	أطروحة دكتوره أو 	بحث منشور في مجلة علمية متخصصة.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ========== نشاط موحّد: صح/خطأ + اختياري داخل نفس البوكس ========== -->
+<div class="activity-box-wrap">
+  <div class="activity-toggle" onclick="toggleActivity(this)" aria-expanded="false">
+    <span class="title"> نشاط 4 :انقر بالماوس أسفل كل عبارة صح أم خطأ:</span>
+    <span class="chev">▼</span>
+  </div>
+
+  <!-- خليه مقفول افتراضيًا -->
+  <div class="activity-content" style="max-height:0; overflow:hidden; transition:max-height .35s ease;">
+    <div class="activity-content-inner">
+
+      <!-- سؤال 1: صح/خطأ -->
+      <div class="mcq" data-correct="false" style="margin-bottom:14px;">
+        <p><strong>العبارة 1:</strong> يجب أن تكون فكرة مشروع التخرج مبتكرة ولا يمكن تحديثها.</p>
+        <label><input type="radio" name="tf1" value="false"> صح</label><br>
+        <label><input type="radio" name="tf1" value="true"> خطأ</label><br>
+        <button type="button" class="check-btn" style="margin-top:8px;">تحقق</button>
+        <div class="feedback"></div>
+      </div>
+
+      <hr>
+      <!-- سؤال 1: صح/خطأ -->
+      <div class="mcq" data-correct="false" style="margin-bottom:14px;">
+        <p><strong>العبارة 2:</strong>   الأدوار الأساسية للمشرف الأكاديمي  هو  اختيار فكرة مناسبة وإعداد خطة عمل.</p>
+        <label><input type="radio" name="tf2" value="true"> صح</label><br>
+        <label><input type="radio" name="tf2" value="false"> خطأ</label><br>
+        <button type="button" class="check-btn" style="margin-top:8px;">تحقق</button>
+        <div class="feedback"></div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== فتح/إغلاق البوكس ===== */
+window.toggleActivity = window.toggleActivity || function(toggleBtn){
+  toggleBtn.classList.toggle('open');
+  const content = toggleBtn.nextElementSibling;
+  const expanded = toggleBtn.classList.contains('open');
+  toggleBtn.setAttribute('aria-expanded', expanded);
+  if(expanded){
+    content.style.maxHeight = content.scrollHeight + 'px';
+  }else{
+    content.style.maxHeight = '0';
+  }
+};
+
+/* ===== التحقق عند الضغط على الزر فقط ===== */
+(function(){
+  function checkOne(mcq){
+    if(!mcq) return;
+    const feedback = mcq.querySelector('.feedback');
+    const correctSet = (mcq.dataset.correct || '').split(',').map(s=>s.trim());
+    const firstRadio = mcq.querySelector('input[type="radio"]');
+    if(!firstRadio){ feedback.textContent=''; return; }
+
+    const group = firstRadio.name;
+    const selected = mcq.querySelector(`input[name="${group}"]:checked`);
+
+    if(!selected){
+      feedback.textContent = '⚠️ من فضلك اختر إجابة أولاً';
+      feedback.style.color = 'orange';
+      return;
+    }
+
+    if(correctSet.includes(selected.value)){
+      feedback.textContent = '✅ إجابة صحيحة';
+      feedback.style.color = 'green';
+    }else{
+      feedback.textContent = '❌ إجابة خاطئة';
+      feedback.style.color = 'red';
+    }
+
+    // تحديث ارتفاع المحتوى
+    const content = mcq.closest('.activity-content');
+    if(content && content.style.maxHeight && content.style.maxHeight !== '0px'){
+      requestAnimationFrame(()=> content.style.maxHeight = content.scrollHeight + 'px');
+    }
+  }
+
+  // زرار "تحقق" فقط
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('.check-btn');
+    if(!btn) return;
+    e.preventDefault();
+    const mcq = btn.closest('.mcq');
+    checkOne(mcq);
+  });
+})();
+</script>
+
+<br>
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+     12.   التحديات التي تواجههنا  في مشروعات التخرج   وكيفية مواجهتها: 
+  </h3>
+</div>
+<h3 style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+
+تمثل مشروعات التخرج تحديًا حقيقيًا للطلاب، حيث يواجه العديد منهم مجموعة من العقبات التي قد تؤثر سلبًا على جودة المشروع وإنجازه في الوقت المحدد. ومن أبرز هذه التحديات:  </h3>
+<!-- ====== التحديات وكيفية مواجهتها (جدول) ====== -->
+<div style="max-width:1200px; margin:0 auto; direction:rtl; font-family:'Cairo','Tahoma',sans-serif;">
+  <p style="color:#333; margin-bottom:20px; text-align:center;">
+   <strong>المشكلة ↔ الحل</strong>.
+  </p>
+
+<div class="ch-table">
+  <div class="ch-row ch-head">
+    <div>
+      <h3 style="color: #0a2afd; margin: 0;">
+التحدي  </h3>
+    </div>
+    <div>طريقة المواجهة</div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+            <h4 style="color: #0a2afd; ">
+      1. ضعف تحديد الموضوع أو غموض الفكرة
+</h4>
+    </div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+  <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> البدء المبكر بالمقترحات ومناقشتها مع المشرف لضمان الوضوح والقابلية للتطبيق.</li>
+        <li>وضع أهداف دقيقة ومحددة منذ البداية.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+   <h4 style="color: #0a2afd; ">
+      2. ضيق الوقت وقلةالتخطيط   </h4>
+</div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+        <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> استخدام أدوات إدارة المشروع ، وتقسيم المشروع إلى مهام صغيرة .</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+         <h4 style="color: #0a2afd; ">
+          3. نقص المهارات التقنية أو البحثية
+        </h4>
+      </div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+         <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> تنمية المهارات عبر دورات قصيرة وتعلم ذاتي بمصادر موثوقة.</li>
+        <li> الاستفادة من توجيهات المشرفين  .</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+   <h4 style="color: #0a2afd; ">
+4. مشكلات التنسيق والعمل الجماعي</h4>
+
+ </div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+         <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> توزيع أدوار واضح ومكتوب داخل الفريق.</li>
+        <li> اجتماعات دورية سريعة للتنسيق.</li>
+        <li> إنشاء قنوات اتصال فعّالة (مجموعة نقاش/بريد إلكتروني/لوحة مهام).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+   <h4 style="color: #0a2afd; ">
+5. صعوبات في جمع البيانات أواختبار المنتج
+      </h4>
+
+ </div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+         <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> تجريب أولي للمنتج التعليمي  وجمع تغذية راجعة من المستخدمين.</li>
+        <li> تعديل الخطة بناءً على النتائج لتجنب الأخطاء لاحقًا.</li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="ch-row">
+    <div>
+     <h4 style="color: #0a2afd; ">
+6. قلةالموارد والمراجع
+</h4>
+</div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+         <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> استثمار مكتبات وقواعد بيانات رقمية بديلة.</li>
+        <li> التواصل مع أعضاء هيئة التدريس لاقتراح مصادر.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+   <h4 style="color: #0a2afd; ">
+7. ضعف المهارات البحثية
+</h4>
+</div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+         <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> تحسين صياغة مشكلة البحث وخطة منهجية واضحة.</li>
+        <li> توثيق المصادر بشكل صحيح.</li>
+        <li> طلب مراجعات دورية من المشرف لضمان الجودة.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+<h4 style="color: #0a2afd; ">
+          8. الاعتماد المفرط على المشرف أو الزملاء
+        </h4>
+</div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+         <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> تعزيز الاستقلالية بتحديد مخرجات أسبوعية واضحة.</li>
+        <li> تحمل المسؤولية الفردية وطلب الملاحظات بانتظام .</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row">
+    <div>
+    <h4 style="color: #0a2afd; ">
+9. ضعف في اللغة الأكاديمية
+        </h4>
+</div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+        <p style="color:#333; text-align:center;">
+ويمكننا حلها من خلال:   </p>
+        <li> مراجعة لغوية للنصوص والتأكد من الالتزام بعلامات الترقيم.</li>
+        <li> الالتزام بأسلوب علمي واضح والاطلاع على نماذج سابقة .</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ch-row ch-tip">
+    <div>
+          <h5 style="color: #0a2afd; ">
+      نصيحة ختامية
+              </h5>
+
+    </div>
+    <div>
+      <ul style="margin:0; padding-left:20px;">
+        <li>	التكيف مع المتغيرات والقدرة على إعادة التخطيط حسب الظروف الطارئة.</li>
+      </ul>
+    </div>
+  </div>
+
+<br>
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+   13.  أخطاء شائعة في مشروعات التخرج  :  
+  </h3>
+</div>
+<h3 style="color: #333; text-align: justify; font-size: 18px; line-height: 2; font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+
+ التعرف على الأخطاء الشائعة يُساعد الطلاب على تجنّبها منذ البداية، مما يُسهم في رفع جودة المشروع ، ويُجنبهم العقبات التي قد تُؤدي إلى ضعف التقييم أو عدم قبول المشروع. ومن أبرز هذه الأخطاء:
+  </h3>
+<!-- ====== Timeline للأخطاء الشائعة مع نصائح ملونة + صور ====== -->
+<div style="max-width:10000px; margin:0 auto; direction:rtl; font-family:'Cairo','Tahoma',sans-serif;">
+
+  <div class="timeline1">
+    <!-- 1 -->
+    <div class="timeline1-item" style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+      <img src="images/have idea.jpg" alt="اختيار فكرة خاطئة" style="width:200px; height:200px; object-fit:cover; border-radius:12px;">
+      <div class="timeline1-content">
+        <h4>اختيار فكرة واسعة جدًا أو غير قابلة للتطبيق </h4>
+        <p>يؤدي ذلك إلى التشتت وعدم القدرة على الإنجاز ضمن الإطار الزمني والإمكانيات المتاحة.</p>
+        <p class="tip tip1"> نصيحة: اختر فكرة محددة قابلة للتنفيذ ضمن الوقت والموارد المتاحة.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="timeline1-item" style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+      <img src="images/studentss.jpg" alt="الفئة المستهدفة" style="width:200px; height:100px; object-fit:cover; border-radius:12px;">
+      <div class="timeline1-content">
+        <h4>إهمال دراسةالفئة المستهدفة </h4>
+        <p>قد تفشل المشروعات  إذا لم تكن مناسبة لاحتياجات المتعلمين أو خصائصهم.</p>
+        <p class="tip tip2"> نصيحة: ابحث عن احتياجات الفئة المستهدفة قبل البدء في المشروع.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="timeline1-item" style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+      <img src="images/erro3.jpg" alt="التنفيذ دون تخطيط" style="width:200px; height:200px; object-fit:cover; border-radius:12px;">
+      <div class="timeline1-content">
+        <h4>البدء في التنفيذ قبل التخطيط الجيد </h4>
+        <p>البدء في التصميم أو البرمجة دون خطة واضحة يؤدي إلى عشوائية وفقدان الترابط.</p>
+        <p class="tip tip3"> نصيحة: ضع خطة واضحة قبل البدء في أي تنفيذ.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="timeline1-item" style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+      <img src="images/eror4.jpg" alt="ضعف التوثيق" style="width:200px; height:200px; object-fit:cover; border-radius:12px;">
+      <div class="timeline1-content">
+        <h4>ضعف التوثيق أو إهماله </h4>
+        <p>التوثيق غير المنهجي قد يؤدي إلى ضياع المعلومات أو رفض المشروع من لجان التحكيم.</p>
+        <p class="tip tip4"> نصيحة: وثّق كل خطوة بطريقة منظمة وواضحة.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="timeline1-item" style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+      <img src="images/eror5.jpg" alt="ضعف التعاون" style="width:200px; height:200px; object-fit:cover; border-radius:12px;">
+      <div class="timeline1-content">
+        <h4>ضعف التعاون داخل فريق العمل </h4>
+        <p>غياب توزيع الأدوار أو الاعتماد على فرد واحد يقلل من جودة المنتج وروح الفريق.</p>
+        <p class="tip tip5"> نصيحة: وزّع المهام بوضوح واعمل بروح الفريق.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="timeline1-item" style="display:flex; align-items:center; gap:20px; margin-bottom:30px;">
+      <img src="images/eror6.jpg" alt="إهمال التجريب" style="width:200px; height:200px; object-fit:cover; border-radius:12px;">
+      <div class="timeline1-content">
+        <h4>تجاهل مرحلة التجريب والتغذية الراجعة </h4>
+        <p>تنفيذ المشروع دون اختباره يفقده المصداقية العلمية والتربوية.</p>
+        <p class="tip tip6"> نصيحة: جرّب المشروع واحصل على تغذية راجعة قبل التقديم.</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<br>
+
+<div class="activity-box-wrap">
+  <div class="activity-toggle" onclick="toggleActivity(this)">
+    <span class="title"> نشاط 5: رتب الخطوات   </span>
+    <span class="chev">▼</span>
+  </div>
+  <div class="activity-content">
+    <div class="activity-content-inner">
+      <p><strong>اسحب وأفلت خطوات التخطيط لمشروع التخرج بالترتيب الصحيح:</strong></p>
+      <ul id="sortable-steps" style="list-style:none; padding:0;">
+        <li class="draggable" draggable="true">إنتاج مشروع التخرج</li>
+        <li class="draggable" draggable="true">تحليل الاحتياجات التعليمية</li>
+        <li class="draggable" draggable="true">إعداد خطة مشروع التخرج</li>
+        <li class="draggable" draggable="true">تقييم مشروع التخرج</li>
+      </ul>
+      <button onclick="checkOrder()">تحقق من الترتيب</button>
+      <div id="order-feedback" class="feedback"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const correctOrder = [
+  "تحليل الاحتياجات التعليمية",
+  "إعداد خطة مشروع التخرج",
+  "إنتاج مشروع التخرج",
+  "تقييم مشروع التخرج"
+];
+
+function checkOrder(){
+  let items = document.querySelectorAll("#sortable-steps li");
+  let order = Array.from(items).map(i=>i.innerText.trim());
+  let feedback = document.getElementById("order-feedback");
+
+  if(JSON.stringify(order) === JSON.stringify(correctOrder)){
+    feedback.innerHTML = "✅ ترتيب صحيح";
+    feedback.style.color="green";
+  }else{
+    feedback.innerHTML = "❌ الترتيب غير صحيح";
+    feedback.style.color="red";
+  }
+}
+
+// سحب وإفلات
+document.querySelectorAll(".draggable").forEach(el=>{
+  el.addEventListener("dragstart",e=>{
+    e.dataTransfer.setData("text/plain",e.target.innerText);
+    e.target.classList.add("dragging");
+  });
+  el.addEventListener("dragend",()=>el.classList.remove("dragging"));
+});
+
+let list=document.getElementById("sortable-steps");
+list.addEventListener("dragover",e=>{
+  e.preventDefault();
+  let dragging=document.querySelector(".dragging");
+  let afterElement=getDragAfterElement(list,e.clientY);
+  if(afterElement==null){
+    list.appendChild(dragging);
+  }else{
+    list.insertBefore(dragging,afterElement);
+  }
+});
+
+function getDragAfterElement(container,y){
+  let els=[...container.querySelectorAll(".draggable:not(.dragging)")];
+  return els.reduce((closest,child)=>{
+    const box=child.getBoundingClientRect();
+    const offset=y-box.top-box.height/2;
+    if(offset<0 && offset>closest.offset){
+      return {offset:offset,element:child};
+    }else{
+      return closest;
+    }
+  },{offset:Number.NEGATIVE_INFINITY}).element;
+}
+</script>
+   
+
+<br>
+
+  
+
+
+<br>
+<div class="row-flex">
+  <!-- ✅ النص -->
+  <div class="activity-text" style="flex: 1;">
+   <div style="background-color: #f8d7da; 
+            border: 1px solid #f5c2c7; 
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+  <h3 style="color: #0a2afd; margin: 0;">
+     14.   أمثلة ونماذج واقعية لمشروعات التخرج: 
+  </h3>
+</div>
+</div>
+</div>
+<p style="color:#333; margin-bottom:20px; text-align:right;">
+    الاطلاع على أمثلة ونماذج لمشروعات التخرج  السابقة يمنحك رؤية واضحة حول كيفية تنظيم الأفكار وتنفيذ مشروعات التخرج بشكل علمي وعملي، الإطلاع علي هذه النماذج يساعدك على استلهام أفكار جديدة، وتطوير مشروعك الخاص بطريقة متميزة ومبدعة.
+</p>
+<!-- رابط درايف -->
+<!-- زر كريتف لمشاهدة الفيديوهات -->
+<p style="text-align:center; margin-bottom:30px;">
+  <a href="https://drive.google.com/drive/folders/1speN0LJvKA2NkJmpcL76ubfshx9ZANrI?usp=drive_link" target="_blank" 
+     style="
+       display: inline-block;
+       background: linear-gradient(90deg, #1464c7, #5ce22b);
+       color: #ffffff;
+       font-weight: bold;
+       padding: 12px 24px;
+       border-radius: 12px;
+       text-decoration: none;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+       transition: transform 0.2s, box-shadow 0.2s;
+       font-family: 'Cairo', sans-serif;
+     "
+     onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';"
+  >
+    شاهد أمثلة لمشروعات التخرج  من خلال  Google Drive
+  </a>
+</p>
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+</div>
+</div>
+
+
+
+
+
+<div class="module-description" onclick="toggleContent(this)">
+  الاختبار البعدي  للموديول الأول <i class='bx bx-chevron-down'></i>
+</div>
+<div class="accordion-content">
+    <h4 style="color: #0a2afd;">
+    يمكنك أداء اختبار الموديول الأول:
+
+    </h4>
+
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScSdiiiHGFBi-O_30w9lfLFB_Tl1pT54gF5_j3DUSNV_7Vjrw/viewform?usp=header"
+
+     target="_blank" 
+     class="cta-button">
+    اضغط هنا لبدء الاختبار
+  </a>
+</div>
+</div>
+    </section>
+
+
+
+    <!-- ✅ نص تشجيعي وزر ثابت أسفل الصفحة -->
+<p class="note-text">
+  ✅ بعد الإنتهاء من دراسة الموديول الأول ،  انتقل إلى الموديول الثاني .
+</p>
+
+<!-- ✅ زر البدء -->
+    <a href="module2 - pre test.html" class="cta-button">  الموديول الثاني </a>
+  
+<!-- ✅ زر الرجوع للموديول السابق -->
+<a href="module1 - pre test .html" class="floating-nav-btn prev" title="الموديول السابق">
+  <i class='bx bx-chevron-right'></i>
+</a>
+
+<!-- ✅ زر التقدم للموديول التالي -->
+<a href="module2 - pre test.html" class="floating-nav-btn next" title="الموديول التالي">
+  <i class='bx bx-chevron-left'></i>
+</a>
+  </main>
+  <br>
+
+<footer>
+  <p class="footer-info">
+    <span class="uni">جامعة دمياط -</span>
+    <span class="faculty">كلية التربية -</span>
+    <span class="dept">قسم تكنولوجيا التعليم -</span>
+    <span class="name">  مي محمد حافظ سبلة -</span>
+    <span class="job"> معيدة بقسم تكنولوجيا التعليم</span>
+  </p>
+  <p class="footer-year">© 2025</p>
+</footer>
+
+
+<!-- ✅ نافذة التكبير الموحدة -->
+<div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:999;">
+  <img id="modalImage" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
+
+</body>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">
+  ↑
+</button>
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    scrollTopBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+<script>
+  // فتح/إغلاق النشاط
+function toggleActivity(toggleBtn) {
+  toggleBtn.classList.toggle('open');
+  let content = toggleBtn.nextElementSibling;
+  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+}
+
+const avatarRows = document.querySelectorAll('.avatar-row');
+avatarRows.forEach(row => {
+  row.addEventListener('click', () => {
+    row.classList.toggle('active'); // يفتح أو يقفل المحتوى لكل صورة مستقل
+  });
+});
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImage.src = img.src;
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+</script>
+<script>
+const logosBar = document.querySelector('.logos-bar');
+const navBar = document.querySelector('nav');
+
+function adjustNavPosition() {
+  const height = logosBar.offsetHeight;
+  navBar.style.top = `${height}px`;
+}
+
+window.addEventListener('load', adjustNavPosition);
+window.addEventListener('resize', adjustNavPosition);
+</script>
+
+
+
+<script>
+  function toggleContent(element) {
+  element.classList.toggle("open");
+  const content = element.nextElementSibling;
+  if (content && content.classList.contains("accordion-content")) {
+    content.classList.toggle("expanded");
+  }
+}
+</script>
+
+<!-- ✅ نهاية الفوتر وبداية سكربت الوظائف -->
+
+<script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+
+</html>

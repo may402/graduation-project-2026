@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>مدي التقدم</title>
+  <link rel="icon" href="images/graduation.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+ <!-- ✅ شريط الشعارات -->
+  <!-- ✅ شريط الشعارات -->
+  <div class="logos-bar">
+    <div style="display: flex; gap: 15px;">
+      <img src="images/damietta.png" alt="شعار الجامعة" />
+              <img src="images/LOGO.jpg" alt="شعار الكلية" />
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span class="my-name">مي محمد حافظ سبلة</span>
+      <img src="images/may.jpg" alt="مي" class="my-pic" />
+      <div style="text-align: right; margin-right: 10px;">
+  <p style="margin: 0; font-weight: bold; color: #b92272;font-size: 10px "> أدوات التواصل</p>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" title="فيسبوك" style="color: #3b5998; font-size: 20px;"><i class='bx bxl-facebook-circle'></i></a>
+    <a href="https://wa.me/201062309203" target="_blank" title="واتساب" style="color: #25D366; font-size: 20px;"><i class='bx bxl-whatsapp'></i></a>
+    <a href="mailto:maysabla5557@gmail.com" title="البريد الإلكتروني" style="color: #EA4335; font-size: 20px;"><i class='bx bxl-gmail'></i></a>
+    </div>
+   </div>
+    </div>
+  </div>
+
+<!-- ✅ شريط التنقل -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">الصفحة الرئيسية</a></li>
+<li><a href="instructions.html">تعليمات الاستخدام</a></li>
+    <li><a href="objectives.html">أهداف بيئة التعلم</a></li>
+       <li><a href="tests.html"> الاختبارات</a></li>
+       <li><a href="total modules.html"> الموديولات</a></li>
+<li><a href="contact-us.html" class="special-link"><i class='bx bx-group'></i> التشارك مع الزملاء</a></li>
+  </ul>
+</nav>
+<main class="fade-in">
+  <!-- ✅ القسم التعريفي -->
+  <section class="environment-goals intro-heading" style="text-align: center; padding: 40px;">
+    <h2 style="color: #b92272;"> مدى تقدمك في تعلم الموديولات</h2>
+<form id="progress-form" style="font-size: 18px; margin-top: 20px; display: flex; flex-direction: column; align-items: flex-start; width: fit-content; margin-inline: auto;">
+  <label><input type="checkbox" class="module" value="1"><span> الموديول 1 <span class="status-icon" id="status-1">⏳</span></span></label>
+<label><input type="checkbox" class="module" value="2"><span> الموديول 2 <span class="status-icon" id="status-2">⏳</span></span></label>
+<label><input type="checkbox" class="module" value="3"><span> الموديول 3 <span class="status-icon" id="status-3">⏳</span></span></label>
+<label><input type="checkbox" class="module" value="4"><span> الموديول 4 <span class="status-icon" id="status-4">⏳</span></span></label>
+<label><input type="checkbox" class="module" value="5"><span> الموديول 5 <span class="status-icon" id="status-5">⏳</span></span></label>
+<label><input type="checkbox" class="module" value="6"><span> الموديول 6 <span class="status-icon" id="status-6">⏳</span></span></label>
+
+</form>
+
+<div id="percentage" style="font-weight: bold; margin-top: 20px; font-size: 20px; color: #4e4e4e;">
+  <span id="progress-emoji">⏳</span> تم إنجاز: <span id="percent-value">0%</span>
+</div>
+
+
+    <div id="congrats-msg" style="display: none; color: #28a745; font-size: 22px; font-weight: bold; margin-top: 20px;">
+  🎉 تهانينا! لقد أنهيت جميع الموديولات بنجاح!
+</div>
+
+<div id="next-module-btn" style="display: none; margin-top: 20px; text-align: center;">
+  <a id="next-module-link" class="cta-button">ابدأ الموديول التالي</a>
+</div>
+
+    <div style="width: 80%; margin: auto; background-color: #eee; height: 25px; border-radius: 20px; overflow: hidden; margin-top: 20px;">
+      <div id="progress-bar" style="height: 100%; width: 0%;
+       background-color: #b92272; 
+      text-align: center;
+       color: white; 
+      line-height: 25px;
+       transition: 0.4s ease; 
+         border: 1px solid #b9227255;
+
+        box-shadow: 0 0 5px #b92272a0;">0%</div>
+    </div>
+    
+
+
+
+<!-- ✅ زر الرجوع لصفحة الموديولات -->
+<div style="text-align: center; margin-top: 20px;">
+  <a href="total modules.html" class="cta-button back-to-modules">← الرجوع إلى صفحة الموديولات</a>
+</div>
+
+
+
+  </section>
+</main>
+
+<br>
+<br>
+
+  
+  
+<footer>
+  <p class="footer-info">
+    <span class="uni">جامعة دمياط -</span>
+    <span class="faculty">كلية التربية -</span>
+    <span class="dept">قسم تكنولوجيا التعليم</span>
+    <span class="name"> - مي محمد حافظ سبلة</span>
+    <span class="job">- معيدة بقسم تكنولوجيا التعليم</span>
+  </p>
+  <p class="footer-year">© 2025</p>
+</footer>
+
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">
+  ↑
+</button>
+
+<script>
+  window.addEventListener('load', () => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    el.classList.add('visible');
+  });
+});
+
+</script>
+
+
+<script>
+
+const logosBar = document.querySelector('.logos-bar');
+const navBar = document.querySelector('nav');
+
+function adjustNavPosition() {
+  const height = logosBar.offsetHeight;
+  navBar.style.top = `${height}px`;
+}
+
+window.addEventListener('load', adjustNavPosition);
+window.addEventListener('resize', adjustNavPosition);
+</script>
+
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    scrollTopBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+<script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+<script>
+  const checkboxes = document.querySelectorAll('.module');
+  const percentText = document.getElementById('percentage');
+  const progressBar = document.getElementById('progress-bar');
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedProgress = JSON.parse(localStorage.getItem('moduleProgress')) || [];
+
+    checkboxes.forEach(cb => {
+      if (savedProgress.includes(cb.value)) {
+        cb.checked = true;
+      }
+      cb.addEventListener('change', updateProgress);
+    });
+
+    updateProgress();
+  });
+
+  function updateProgress() {
+    const total = checkboxes.length;
+    const checkedBoxes = Array.from(checkboxes).filter(cb => cb.checked);
+    const checkedValues = checkedBoxes.map(cb => cb.value);
+    const percent = Math.round((checkedBoxes.length / total) * 100);
+
+    progressBar.style.width = `${percent}%`;
+    progressBar.textContent = `${percent}%`;
+
+    // ✅ زر الموديول التالي
+    const nextModuleIndex = Math.max(...checkedValues.map(Number), 0) + 1;
+    const nextBtnContainer = document.getElementById('next-module-btn');
+    const nextBtnLink = document.getElementById('next-module-link');
+    const congratsMsg = document.getElementById('congrats-msg');
+
+    if (checkedBoxes.length === total) {
+      nextBtnContainer.style.display = 'none';
+      congratsMsg.style.display = 'block';
+    } else {
+      const nextUrl = `module${nextModuleIndex}.html`;
+      nextBtnLink.href = nextUrl;
+      nextBtnLink.textContent = `ابدأ الموديول ${nextModuleIndex}`;
+      nextBtnContainer.style.display = 'block';
+      congratsMsg.style.display = 'none';
+    }
+
+    // ✅ تحديث الرموز بجانب كل موديول
+    checkboxes.forEach(cb => {
+      const icon = document.getElementById(`status-${cb.value}`);
+      if (icon) {
+        if (cb.checked) {
+          icon.textContent = "✅";
+          icon.style.color = "#28a745"; // أخضر
+        } else {
+          icon.textContent = "⏳";
+          icon.style.color = "#b92272"; // موف
+          icon.classList.add("changed");
+          setTimeout(() => icon.classList.remove("changed"), 300);
+        }
+      }
+    });
+
+    // ✅ تغيير الإيموجي حسب النسبة
+    // ✅ تغيير الإيموجي حسب النسبة
+const percentValue = document.getElementById('percent-value');
+const emojiSpan = document.getElementById('progress-emoji');
+
+if (percentValue) {
+  percentValue.textContent = `${percent}%`;
+}
+
+if (emojiSpan) {
+  if (percent === 100) {
+    emojiSpan.textContent = '🎉';
+  } else if (percent > 80) {
+    emojiSpan.textContent = '✅';
+  } else if (percent > 30) {
+    emojiSpan.textContent = '🎯';
+  } else {
+    emojiSpan.textContent = '⏳';
+  }
+}
+
+
+    localStorage.setItem('moduleProgress', JSON.stringify(checkedValues));
+  }
+</script>
+
+
+
+</body>
+</html>
+
+
+
+  
+
+
+

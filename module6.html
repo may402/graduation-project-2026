@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+   <meta charset="UTF-8" />
+  <title>الموديول السادس - تسليم المشروع وتقييمه </title>
+  <link rel="icon" href="images/graduation.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+   <!-- ✅ الشريط الأول -->
+  <div class="logos-bar">
+    <div style="display: flex; gap: 15px;">
+     <img src="images/damietta.png" alt="شعار الجامعة" />
+              <img src="images/LOGO.jpg" alt="شعار الكلية" />
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span class="my-name">مي محمد حافظ سبلة</span>
+      <img src="images/may.jpg" alt="مي" class="my-pic" />
+      <div style="text-align: right; margin-right: 10px;">
+  <p style="margin: 0; font-weight: bold; color: #b92272;font-size: 10px "> أدوات التواصل</p>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" title="فيسبوك" style="color: #3b5998; font-size: 20px;"><i class='bx bxl-facebook-circle'></i></a>
+    <a href="https://wa.me/201062309203" target="_blank" title="واتساب" style="color: #25D366; font-size: 20px;"><i class='bx bxl-whatsapp'></i></a>
+    <a href="mailto:maysabla5557@gmail.com" title="البريد الإلكتروني" style="color: #EA4335; font-size: 20px;"><i class='bx bxl-gmail'></i></a>
+    </div>
+   </div>
+    </div>
+  </div>
+  <!-- ✅ شريط التنقل -->
+ <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">الصفحة الرئيسية</a></li>
+      <li><a href="instructions.html">تعليمات الاستخدام</a></li>
+      <li><a href="objectives.html">أهداف بيئة التعلم</a></li>
+      <li><a href="tests.html">الاختبارات</a></li>
+      <li><a href="total modules.html">الموديولات  </a></li>
+<li><a href="contact-us.html" class="special-link"><i class='bx bx-group'></i> التشارك مع الزملاء</a></li>
+    </ul>
+  </nav>
+
+ <!-- ✅ محتوى الموديول الأول -->
+  <main>
+  <div class="module-banner">
+    <img src="images/mm6.png" alt="صورة " class="module-img">
+
+    <div class="module-text">
+      <p class="module-title">
+        <span class="shiny-name small-title">الموديول السادس</span>
+      <br>
+      <span class="shiny-name small-title">تسليم مشروع التخرج  وتقييمه    </span>
+      </p>
+    </div>
+  </div>
+
+
+     <!-- ✅ محتوى الموديول -->
+  
+<h4 style="color: #095ae4;"> 
+الفيديو التعريفي للموديول السادس  <br>
+يمكنك مشاهدته من خلال النقر علي الأفاتار 
+</h4>
+<!-- الأفاتار -->
+ <div class="video-avatar" onclick="openVideoM5()" style="cursor:pointer; display:inline-block;">
+  <img src="images/avatar-logo.png" alt="عرض الفيديو">
+</div>
+
+<!-- ✅ نافذة الفيديو -->
+<div class="video-popup" id="videoPopupM5" 
+     style="position:fixed; top:0; left:0; right:0; bottom:0; 
+            background:rgba(0,0,0,0.8); display:none; 
+            align-items:center; justify-content:center; z-index:1000;">
+  <div style="position:relative; max-width:800px; width:90%;">
+    <!-- زر الإغلاق -->
+    <span onclick="closeVideoM5()" 
+          style="position:absolute; top:-35px; right:-10px; font-size:28px; color:#fff; cursor:pointer;">✖</span>
+
+    <video id="popupVideoM5" controls preload="none" style="width:100%; border-radius:10px;">
+    <source src="videos/Vm6.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+</div>
+
+<script>
+// ✅ فتح الفيديو
+function openVideoM5() {
+  const popup = document.getElementById("videoPopupM5");
+  const video = document.getElementById("popupVideoM5");
+  popup.style.display = "flex";
+  video.play();
+}
+
+// ✅ إغلاق الفيديو
+function closeVideoM5() {
+  const popup = document.getElementById("videoPopupM5");
+  const video = document.getElementById("popupVideoM5");
+  popup.style.display = "none";
+  video.pause();
+  video.currentTime = 0;
+}
+
+// ✅ إغلاق تلقائي عند انتهاء الفيديو
+document.getElementById("popupVideoM5").addEventListener("ended", closeVideoM5);
+</script>
+
+
+
+
+
+
+
+  <div class="module-description" onclick="toggleContent(this)">
+  الهدف العام للموديول  السادس <i class='bx bx-chevron-down'></i>
+</div>
+
+<div class="accordion-content">
+  <h4 style="color: #333; margin: 0; white-space: nowrap;">
+إنتاج  مشروع التخرج بشكله النهائي.</h4>
+</div>
+
+<div class="module-description" onclick="toggleContent(this)">
+  الأهداف الإجرائية <i class='bx bx-chevron-down'></i>
+</div>
+<div class="accordion-content">
+    <h4 style="color: #0a2afd;"> 
+  بعد الانتهاء من دراسة هذا الموديول يجب أن يكون طالب تكنولوجيا التعليم قادراً على أن:
+<h4 style="color:  #333;"> 
+1. يُعد المشروع للتسليم النهائي وفق التعليمات<br>
+2. يُقدم مشروعه أمام لجنة أو زملاء<br>
+3. يُعد وثائق التسليم النهائية<br>
+    </h4>
+  </div>
+   <div class="module-description" onclick="toggleContent(this)">
+    المحتوى والأنشطة <i class='bx bx-chevron-down'></i>
+      </div>
+ <div class="accordion-content">
+  <div style="display: flex; align-items: flex-start; flex-direction: row; gap: 20px; margin-top: 20px; direction: rtl;">
+    <div style="text-align: right; margin-bottom: 20px;">
+       <div style="display: flex; align-items: flex-start; gap: 70px;">
+<div class="activity-text" style="flex: 1;">
+ <h3 style="color: #b92272; font-size: 20px; line-height: 1.9; text-align: justify;">
+بعد استكمال الموديولات السابقة، تأتي المرحلة الأخيرة من مشروع التخرج، وهي مرحلة تسلسل المشروع وتقييمه، لضمان توافق النتائج مع الأهداف التعليمية وتحقيق المعايير المطلوبة.
+</h3>
+<!-- ✅ العنوان على اليمين -->
+<div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+    1. المرحلة الأولى:  متطلبات تسليم مشروع التخرج  
+        </h3>
+        </div>
+         </div>
+      <div style="display:flex; align-items:center; gap:10px; direction:rtl;">
+  <!-- النص -->
+  <div style="flex:1; text-align:right; font-family:'Cairo', sans-serif; line-height:1.8;">
+    <p>
+      هي مجموعة من الشروط والإجراءات التي يجب على الطالب الالتزام بها عند الانتهاء من تنفيذ مشروعه، لتقديمه بشكل رسمي إلى الجهة التعليمية للمراجعة والتقييم. وتشمل هذه المتطلبات الشكلية والمحتوى، والمرفقات، وطريقة التسليم، والموعد الزمني المحدد.
+    </p>
+  </div>
+  <!-- الصورة -->
+  <div style="flex:0 0 300px;">
+    <img src="images/final.jpg" 
+         alt="اختبار المنتج التعليمي" 
+         style="width:100%; border-radius:10px;">
+  </div>
+</div>
+<div id="modalFinal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+                      background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
+  <img id="imgFinal" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
+<!-- داخل <head> -->
+<style>
+  @keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(40px);}
+    100% {opacity: 1; transform: translateY(0);}
+  }
+  .timeline-container {
+    position: relative;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px 10px;
+    font-family: 'Simplified Arabic', Tahoma, sans-serif;
+    direction: rtl; /* كله يبقى لليمين */
+  }
+  .timeline-container h3 {
+    text-align: center;
+    font-size: 2em;
+    color: #6a0dad;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  .timeline-line {
+    display: none; /* هنلغي الخط اللي في النص */
+  }
+  .timeline-item {
+    position: relative;
+    width: 100%; /* كله بعرض كامل */
+    padding: 20px 30px;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    text-align: right; /* كله يمين */
+  }
+  .timeline-content {
+    background: linear-gradient(135deg, #f9f6ff, #efe7ff);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    background: #6a0dad;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .timeline-content h3 {
+    margin-bottom: 10px;
+    color: #4b0082;
+    font-size: 1.2em;
+  }
+  .timeline-content ul {
+    list-style: none;
+    padding-right: 20px;
+    margin: 0;
+  }
+  .timeline-content ul li {
+    position: relative;
+    margin-bottom: 8px;
+    padding-right: 20px;
+  }
+  .timeline-content ul li::before {
+    content: "✔";
+    position: absolute;
+    right: 0;
+    color: #6a0dad;
+    font-weight: bold;
+  }
+  .example-box {
+    margin-top: 12px;
+    padding: 12px;
+    background: #fff;
+    border: 1px dashed #6a0dad;
+    border-radius: 12px;
+    font-size: 0.9em;
+    color: #333;
+  }
+</style>
+
+<!-- داخل <body> -->
+ <h3 class="right-title">🔹متطلبات تسليم  مشروع التخرج:</h3>
+<div class="timeline-container">
+  <div class="timeline-line"></div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">📑</div>
+      <h3>أولًا: الالتزام بالنموذج الرسمي</h3>
+      <ul>
+        <li>تقديم المشروع وفق الدليل أو القالب الموحد.</li>
+        <li>يشمل ترتيب الفصول، التنسيق، نوع الخط وحجمه.</li>
+        <li>مثال: خط "Simplified Arabic" حجم 14 ومسافة 1.5.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">📘</div>
+      <h3>ثانيًا: مكونات التقرير النهائي</h3>
+      <ul>
+        <li>صفحة الغلاف، الإهداء والشكر.</li>
+        <li>الملخص (عربي/إنجليزي) + الفهرس.</li>
+        <li>المقدمة، الأهداف، المنهجية، النتائج، التوصيات.</li>
+        <li>المراجع والملاحق.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">💻</div>
+      <h3>ثالثًا: النسخة الإلكترونية والورقية</h3>
+      <ul>
+        <li>نسخة ورقية مطبوعة ومجلدة.</li>
+        <li>نسخة إلكترونية (PDF أو Word).</li>
+        <li>قد تحتوي روابط لمنتجات رقمية (تطبيق، موقع، فيديو).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">🎯</div>
+      <h3>رابعًا: مطابقة الأهداف التعليمية</h3>
+      <ul>
+        <li>إظهار تحقيق الأهداف التعليمية المحددة مسبقًا.</li>
+        <li>مثال: تنمية مهارات التصميم التعليمي أو توظيف التقنية.</li>
+        <li>إضافة جدول يربط المخرجات بالأهداف.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">⏰</div>
+      <h3>خامسًا: الالتزام بالموعد النهائي</h3>
+      <ul>
+        <li>التسليم خلال فترة التقييم الرسمي.</li>
+        <li>التأخير يؤدي إلى خصم درجات أو رفض المشروع.</li>
+        <li>عمل جدول زمني لتسليم الأجزاء.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">✍️</div>
+      <h3>سادسًا: تعهّد الأصالة</h3>
+      <ul>
+        <li>توقيع الطالب أن المشروع عمله الخاص.</li>
+        <li>يعزز الأمانة العلمية ويجنب عقوبات الانتحال.</li>
+      </ul>
+       </div>
+        </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <div class="timeline-icon">💡</div>
+      <h3>أمثلة تطبيقية</h3>
+      <div class="example-box">
+       •	في كليات التربية، قد يُطلب تقديم المشروع داخل ملف مطبوع يحتوي على نسخة ورقية + قرص مدمج (CD) يحوي النسخة الرقمية. <br>
+•	في مشاريع البرمجة، يُطلب تضمين كود المصدر وتوثيق طريقة التشغيل.<br>
+•	في مشاريع تكنولوجيا التعليم، يُطلب تضمين النسخة التفاعلية من المنتج (موقع – لعبة – تطبيق) مرفقة مع دليل  مشروع التخرج .<br>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ✅ العنوان على اليمين -->
+<div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+    2. المرحلة الثانية:   العرض التقديمي لمشروع التخرج  
+        </h3>
+        </div>
+         </div>
+  <!-- ✅ أيقونة باوربوينت -->
+  <div style="text-align:center; margin-top:25px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732224.png" 
+         alt="PowerPoint Icon" 
+         style="width:65px; height:65px;">
+    <p style="color:#444; font-size:1em; margin:8px 0 0;">(PowerPoint / Canva / Prezi)</p>
+  </div>
+ <div style="display:flex; align-items:center; gap:10px; direction:rtl;">
+  <!-- النص -->
+  <div style="flex:1; text-align:right; font-family:'Cairo', sans-serif; line-height:1.8;">
+    <p>
+عرض مشروع التخرج  المرحلة التي يقوم فيها الطالب أو فريق العمل بتقديم مشروع التخرج أمام لجنة التقييم أو الجمهور، بهدف شرح الفكرة والأهداف، واستعراض خطوات التنفيذ والنتائج والتقنيات المستخدمة، وذلك بأسلوب علمي ومنظم يُبرز قيمة المشروع وجودة مخرجاته.    </p>
+  </div>
+  <!-- الصورة -->
+  <div style="flex:0 0 300px;">
+    <img src="images/presentationn.jpg" 
+         alt="اختبار المنتج التعليمي" 
+        style="width:70%; border-radius:10px;">
+  </div>
+</div>
+<h3 class="right-title">🔹من خلال الفيديو التالي يمكنك تقديم العرض التقديمي  لمشروع التخرج  بطريقة جيدة:  </h3>
+<!-- ✅ أيقونة تشغيل الفيديو -->
+<div class="video-container" onclick="openInnerVideo1()">
+  <img src="images/Icon Logo6.png" alt="عرض الفيديو">
+  <div class="play-button"></div>
+</div>
+<!-- نافذة الفيديو -->
+<div class="video-popup" id="videoPopupInner1" 
+     style="position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:1000;">
+  <div style="position:relative; max-width:800px; width:90%;">
+    <!-- زر الإغلاق -->
+    <span onclick="closeInnerVideo1()" 
+          style="position:absolute; top:-35px; right:-10px; font-size:28px; color:#fff; cursor:pointer;">✖</span>
+
+    <video id="popupInnerVideo1" controls preload="none" style="width:100%; border-radius:10px;">
+    <source src="videos/Vpresentation.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+</div>
+
+<script>
+function openInnerVideo1() {
+  const popup = document.getElementById("videoPopupInner1");
+  const video = document.getElementById("popupInnerVideo1");
+  popup.style.display = "flex";
+  video.play();
+}
+
+function closeInnerVideo1() {
+  const popup = document.getElementById("videoPopupInner1");
+  const video = document.getElementById("popupInnerVideo1");
+  popup.style.display = "none";
+  video.pause();
+  video.currentTime = 0;
+}
+
+// ✅ إغلاق تلقائي عند انتهاء الفيديو
+document.getElementById("popupInnerVideo1").addEventListener("ended", function() {
+  closeInnerVideo1();
+});
+</script>
+
+  
+<h3 class="right-title"> 🔹   أهمية  العرض التقديمي لمشروع  التخرج :</h3>
+<img src="images/fina;ic.png" class="zoomable-final" 
+     style="width:800px; max-width:100%; cursor:zoom-in; border-radius:10px; display:block; margin:0 auto;">
+ <h3 class="right-title">🔹مكونات العرض التقديمي  لمشروع التخرج:</h3>
+<section style="direction:rtl; font-family:'Cairo', sans-serif;  padding:40px;">  
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> المقدمة التعريفية</h3>
+      <p>اسم المشروع – الفريق – المشرف – خلفية مختصرة عن المشكلة وأهميتها.</p>
+    </div>
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> أهداف المشروع</h3>
+      <p>توضيح الأهداف التعليمية أو التقنية وما يسعى المشروع لتحقيقه.</p>
+    </div>
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> فكرة المشروع</h3>
+      <p>الفكرة الرئيسية، خطوات المعالجة، الأدوات والتقنيات المستخدمة.</p>
+    </div>
+    
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> خطوات التنفيذ</h3>
+      <p>الجدول الزمني، العقبات، التحديات، والحلول.</p>
+    </div>
+    
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> النتائج</h3>
+      <p>المنتجات النهائية وإبراز القيمة العلمية أو العملية.</p>
+    </div>
+    
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> التقييم</h3>
+      <p>التحقق من الجودة + التغذية الراجعة.</p>
+    </div>
+    
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> الخاتمة</h3>
+      <p>تلخيص سريع + شكر للمشرفين والداعمين.</p>
+    </div>
+    
+    <div style="background:#f9f6ff; padding:20px; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color:#6a0dad;"> العناصر الداعمة</h3>
+      <p>فيديو، إنفوجراف، أو عرض مباشر للمنتج.</p>
+    </div>
+  </div>
+</section>
+<h3 class="right-title"> 🔹   إرشادات  لعرض مشروع التخرج جيد:</h3>
+<section style="direction:rtl; font-family:'Cairo', sans-serif; padding:50px; ">
+  <div style="position:relative; max-width:800px; margin:auto; padding-right:20px;">
+    <!-- الخط الرأسي -->
+    <div style="position:absolute; right:20px; top:0; bottom:0; width:4px; background:#6a0dad;"></div>
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#6a0dad; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">1</div>
+      <h3 style="color:#6a0dad;">التحضير والتدريب</h3>
+      <p style="color:#444;">جهز العرض مسبقًا وتدرّب على تقديمه بوضوح وثقة.</p>
+    </div>
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#cc0066; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">2</div>
+      <h3 style="color:#cc0066;">إدارة الوقت</h3>
+      <p style="color:#444;">الالتزام بالمدة المحددة (7–10 دقائق).</p>
+    </div>
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#0077b6; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">3</div>
+      <h3 style="color:#0077b6;">تنظيم الشرائح</h3>
+      <p style="color:#444;">شرائح مختصرة، جذابة، وتعتمد على الصور والإنفوجرافيك.</p>
+    </div>
+
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#009966; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">4</div>
+      <h3 style="color:#009966;">اللغة وأسلوب العرض</h3>
+      <p style="color:#444;">استخدم لغة واضحة وتحكم في نبرة الصوت ولغة الجسد.</p>
+    </div>
+
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#ff9900; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">5</div>
+      <h3 style="color:#ff9900;">إبراز القيمة</h3>
+      <p style="color:#444;">قدم أمثلة حقيقية من المشروع لعرض أهميته.</p>
+    </div>
+
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#0066cc; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">6</div>
+      <h3 style="color:#0066cc;">التفاعل مع اللجنة</h3>
+      <p style="color:#444;">أجب على الأسئلة والملاحظات بثقة وهدوء.</p>
+    </div>
+
+    <!-- خطوة -->
+    <div style="margin-bottom:40px; position:relative; padding-right:60px;">
+      <div style="position:absolute; right:0; top:0; background:#800080; color:#fff; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">7</div>
+      <h3 style="color:#800080;">تقسيم الأدوار</h3>
+      <p style="color:#444;">في العرض الجماعي وزّع الأدوار بشكل منظم.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ✅ العنوان على اليمين -->
+<div style="text-align: right; margin-bottom: 20px;">
+  <div style="background-color: #f8d7da; 
+              border: 1px solid #f5c2c7; 
+              padding: 8px 16px;
+              border-radius: 10px;
+              display: inline-block;
+              font-family: 'Cairo', 'Simplified Arabic', Tahoma, sans-serif;">
+    <h3 style="color: #0a2afd; margin: 0;">
+   3. المرحلة الثالثة :   تسليم وثائق مشروع التخرج  
+        </h3>
+        </div>
+         </div>
+      <div style="display:flex; align-items:center; gap:10px; direction:rtl;">
+  <!-- النص -->
+  <div style="flex:1; text-align:right; font-family:'Cairo', sans-serif; line-height:1.8;">
+    <p>
+هي مجموعة من الملفات والمستندات الرسمية التي يجب أن يُسلّمها الطالب (أو الفريق) في نهاية مشروع التخرج، لتوثيق جميع جوانب المشروع من البداية للنهاية، 
+وتشمل هذه الوثائق الجوانب الفنية، الأكاديمية، والإدارية، وتُستخدم لتقييم الجهد وجودة العمل.
+  </div>
+
+  <!-- الصورة -->
+  <div style="flex:0 0 300px;">
+    <img src="images/final book.png" 
+         alt="اختبار المنتج التعليمي" 
+         style="width:100%; border-radius:10px;">
+  </div>
+</div>
+وتشمل  وثائق مشروع التخرج ما يلي :  
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:30px; 
+            max-width:1100px; margin:auto; padding:40px; direction:rtl; font-family:'Tahoma', sans-serif;">
+  <!-- تقرير المشروع النهائي -->
+  <div style="background:#f9f0ff; border-radius:20px; padding:30px; 
+              box-shadow:0 6px 15px rgba(0,0,0,0.12); border-right:6px solid #6a0dad;">
+    <h3 style="color:#6a0dad; text-align:center;">تقرير المشروع النهائي </h3>
+    <p style="color:#333; font-size:16px; line-height:1.9;">
+      وثيقة مكتوبة توضح كل تفاصيل المشروع بدءًا من الفكرة حتى التنفيذ، وتُعد المرجع الأساسي للمشروع.
+    </p>
+    <ul style="font-size:15px; color:#444; line-height:1.9; padding-right:20px;">
+      <li>صفحة الغلاف (العنوان، الفريق، الكلية، المشرف، السنة الدراسية)</li>
+      <li>مقدمة عن المشروع ومشكلة المشروع </li>
+      <li>الأهداف، وخطة العمل، ولمراحل </li>
+      <li>الأدوات والتقنيات المستخدمة</li>
+      <li>النتائج والتوصيات والمقترحات</li>
+      <li>الملاحق (صور، جداول، أكواد، استبيانات... )</li>
+    </ul>
+  </div>
+
+  <!--  الكود / المنتج النهائي -->
+  <div style="background:#e8f7ff; border-radius:20px; padding:30px; 
+              box-shadow:0 6px 15px rgba(0,0,0,0.12); border-right:6px solid #008cba;">
+    <h3 style="color:#008cba; text-align:center;">الكود البرمجي أو المنتج النهائي </h3>
+    <p style="color:#333; font-size:16px; line-height:1.9;">
+       الملف الرقمي الذي يحتوي على التطبيق أو الموقع أو النموذج المصمم في المشروع.
+    </p>
+    <ul style="font-size:15px; color:#444; line-height:1.9; padding-right:20px;">
+      <li>يسلم عبر USB أو رابط Google Drive / GitHub</li>
+      <li>يجب تنظيم الملفات بشكل يسهل فتحها وتشغيلها</li>
+      <li>يُرفق معه ملف README أو إرشادات الاستخدام</li>
+    </ul>
+  </div>
+  <!-- دليل المستخدم -->
+  <div style="background:#fff8e6; border-radius:20px; padding:30px; 
+              box-shadow:0 6px 15px rgba(0,0,0,0.12); border-right:6px solid #ff9800;">
+    <h3 style="color:#ff9800; text-align:center;">دليل المستخدم </h3>
+    <p style="color:#333; font-size:16px; line-height:1.9;">
+      وثيقة بسيطة تُوضح كيفية استخدام المنتج النهائي، سواء كان موقعًا أو تطبيقًا أو نظامًا.
+    </p>
+    <ul style="font-size:15px; color:#444; line-height:1.9; padding-right:20px;">
+      <li>خطوات التشغيل</li>
+      <li>واجهات الاستخدام مع شرحها</li>
+      <li>أمثلة على إدخال البيانات والحصول على النتائج</li>
+    </ul>
+    <p style="color:#333; font-size:15px; line-height:1.8;">
+      الهدف: تسهيل تجربة لجنة التقييم أو أي مستخدم آخر لفهم كيفية استخدام المنتج.
+    </p>
+  </div>
+  <!-- 🎤 عرض الشرائح التقديمي -->
+  <div style="background:#f0fff4; border-radius:20px; padding:30px; 
+              box-shadow:0 6px 15px rgba(0,0,0,0.12); border-right:6px solid #28a745;">
+    <h3 style="color:#28a745; text-align:center;">عرض الشرائح التقديمي </h3>
+    <p style="color:#333; font-size:16px; line-height:1.9;">
+      نسخة من العرض الذي تم تقديمه يوم المناقشة أمام اللجنة.
+    </p>
+    <ul style="font-size:15px; color:#444; line-height:1.9; padding-right:20px;">
+      <li>اسم المشروع وأعضاء الفريق</li>
+      <li>فكرة المشروع والمشكلة</li>
+      <li>خطة التنفيذ والمراحل</li>
+      <li>عرض المنتج النهائي (صور أو فيديو قصير)</li>
+      <li>التوصيات والخاتمة</li>
+    </ul>
+    <p style="color:#333; font-size:15px; line-height:1.8;">
+      <strong>تنسيق الشرائح:</strong> مختصر – واضح – بصري أكثر من كونه نصي، و
+      يُفضل استخدام أدوات مثل PowerPoint أو Canva.
+    </p>
+  </div>
+</div>
+<div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; max-width:1100px; margin:auto; padding:40px;">
+  <div style="overflow:hidden; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+    <img src="images/Gemini_Gs.png" alt="صورة 1" style="width:100%; height:200px; object-fit:cover;">
+  </div>
+  <div style="overflow:hidden; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+    <img src="images/Gemini (1).png" alt="صورة 2" style="width:100%; height:200px; object-fit:cover;">
+  </div>
+  <div style="overflow:hidden; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+    <img src="images/Gemini(2).png" alt="صورة 3" style="width:100%; height:200px; object-fit:cover;">
+  </div>
+  <div style="overflow:hidden; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+    <img src="images/Gemini_Generatedf.png" alt="صورة 4" style="width:100%; height:200px; object-fit:cover;">
+  </div>
+</div>
+ <h3 style="color: #0a2afd; margin: 0;">
+بعد الإنتهاء من تلك الخطوات يكون مشروع التخرج الخاص بك كاملاً.        </h3>
+<!-- خاتمة كريتف للموديولات -->
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+<div class="module-description" onclick="toggleContent(this)">
+  الاختبار البعدي  للموديول السادس <i class='bx bx-chevron-down'></i>
+</div>
+<div class="accordion-content">
+    <h4 style="color: #0a2afd;">
+    يمكنك أداء اختبار الموديول السادس:
+    </h4>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0inKUJebwmStN_C3GncxW8523shLZjr_aNm4Kl8vf36kguQ/viewform?usp=header"
+     target="_blank" 
+     class="cta-button">
+     اضغط هنا لبدء الاختبار
+  </a>
+</div>
+</div>
+ </section>
+
+     <!-- ✅ نص تشجيعي وزر ثابت أسفل الصفحة -->
+<p class="note-text">
+  ✅ <strong>أجب عن أسئلة الاختبار البعدي للمحتوي التعليمي </strong>  
+</p>
+ <!-- ✅ زر البدء -->
+<a href="post test.html" class="cta-button">      الاختبار البعدي لمشروعات التخرج </a>
+<!-- ✅ زر الرجوع للموديول السابق -->
+<a href="module6 - pre test.html" class="floating-nav-btn prev" title="الموديول السابق">
+  <i class='bx bx-chevron-right'></i>
+</a>
+<br>
+<br>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">
+  ↑
+</button>
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    scrollTopBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)
+      ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+<script>
+  // =========================
+  // فتح/إغلاق النشاط
+  // =========================
+  function toggleActivity(toggleBtn) {
+    toggleBtn.classList.toggle('open');
+    let content = toggleBtn.nextElementSibling;
+    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+  }
+
+  // فتح/إغلاق محتوى الـ avatar row
+  // =========================
+  const avatarRows = document.querySelectorAll('.avatar-row');
+  avatarRows.forEach(row => {
+    row.addEventListener('click', () => {
+      row.classList.toggle('active'); // يفتح أو يقفل المحتوى لكل صورة مستقل
+    });
+  });
+
+  //// فتح/إغلاق المودال لأي صورة قابلة للتكبير
+const zoomableImages = document.querySelectorAll('.zoomable-final');
+const modalFinal = document.getElementById('modalFinal');
+const imgModalFinal = document.getElementById('imgFinal');
+
+zoomableImages.forEach(img => {
+  img.addEventListener('click', () => {
+    modalFinal.style.display = 'flex';
+    imgModalFinal.src = img.src;
+  });
+});
+// اغلاق المودال عند الضغط خارج الصورة
+modalFinal.addEventListener('click', e => {
+  if (e.target === modalFinal) modalFinal.style.display = 'none';
+});
+
+  // =========================
+  // تعديل موقع شريط التنقل حسب ارتفاع اللوغو
+  // =========================
+  const logosBar = document.querySelector('.logos-bar');
+  const navBar = document.querySelector('nav');
+
+  function adjustNavPosition() {
+    const height = logosBar.offsetHeight;
+    navBar.style.top = `${height}px`;
+  }
+
+  window.addEventListener('load', adjustNavPosition);
+  window.addEventListener('resize', adjustNavPosition);
+
+  // =========================
+  // فتح/إغلاق المحتوى الأكوردين
+  // =========================
+  function toggleContent(element) {
+    element.classList.toggle("open");
+    const content = element.nextElementSibling;
+    if (content && content.classList.contains("accordion-content")) {
+      content.classList.toggle("expanded");
+    }
+  }
+
+  // =========================
+  // إضافة class عند تحميل الصفحة (لأغراض CSS/animation)
+  // =========================
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+</script>
+<footer>
+  <p class="footer-info">
+    <span class="uni">جامعة دمياط -</span>
+    <span class="faculty">كلية التربية -</span>
+    <span class="dept">قسم تكنولوجيا التعليم</span>
+    <span class="name"> - مي محمد حافظ سبلة</span>
+    <span class="job">- معيدة بقسم تكنولوجيا التعليم</span>
+  </p>
+  <p class="footer-year">© 2025</p>
+</footer>
+<!-- ✅ شات بوت ثابت في الشمال -->
+
+<!-- ✅ زر المساعد الذكي في الشمال -->
+<div class="chatbot-icon" id="cbIcon" title="وكيل الدعم">💬</div>
+
+<!-- ✅ نافذة الوكيل الذكي -->
+<div class="chatbot-window" id="cbWin" dir="rtl">
+  <div class="chatbot-header">
+    <span>وكيل الدعم الذكي</span>
+    <button class="chatbot-close" id="cbClose">✖</button>
+  </div>
+  <iframe src="afatar.html" 
+          style="width:100%; height:calc(100% - 40px); border:none;"></iframe>
+</div>
+
+<style>
+  /* أيقونة المساعد */
+  .chatbot-icon{
+    position:fixed; bottom:90px; left:20px; 
+    width:60px; height:60px; border-radius:50%;
+    background:#0544b0; color:#fff; 
+    display:flex; align-items:center; justify-content:center;
+    font-size:28px; box-shadow:0 6px 16px rgba(0,0,0,.15); 
+    cursor:pointer; z-index:9999; transition:.25s;
+  }
+  .chatbot-icon:hover{ transform:scale(1.08); background:#0544b0; }
+  /* نافذة المساعد */
+  .chatbot-window{
+    position:fixed; bottom:110px; left:20px;
+    width:400px; max-width:92vw; height:600px;
+    background:#fff; border-radius:16px;
+    box-shadow:0 14px 34px rgba(0,0,0,.18);
+    overflow:hidden; z-index:9999; 
+    display:none; flex-direction:column;
+  }
+  .chatbot-window.open{ display:flex; }
+
+  /* الهيدر */
+  .chatbot-header{
+    background:linear-gradient(135deg,rgb(29, 13, 173),#486bf5);
+    color:#fff; padding:10px 12px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:12px; font-weight:400;
+  }
+  .chatbot-close{
+    border:none; background:transparent; 
+    color:#fff; font-size:18px; cursor:pointer;
+  }
+</style>
+<script>
+  const icon = document.getElementById("cbIcon");
+  const win  = document.getElementById("cbWin");
+  const closeBtn = document.getElementById("cbClose");
+
+  icon.addEventListener("click", () => {
+    win.classList.toggle("open");
+  });
+  closeBtn.addEventListener("click", () => {
+    win.classList.remove("open");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اتصل بزملائك</title>
+  <link rel="icon" href="images/graduation.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- أيقونات -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- خط كايرو -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ملف التنسيقات -->
+  <link rel="stylesheet" href="style.css">
+ <!-- ✅ المحتوى -->
+  
+  <style>
+   
+  
+    .intro-heading {
+      text-align: center;
+      padding: 100px 20px 30px;
+    }
+
+    .supervisor-card {
+      background: #fff;
+      border-radius: 25px;
+      width: 1000px;
+      padding: 35px 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(106, 13, 173, 0.15);
+      margin: 40px auto;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    
+    .supervisor-card:hover {
+      box-shadow: 0 6px 25px rgba(106, 13, 173, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .bxl-whatsapp { color: #25D366; }
+  
+    .main-btn {
+       display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      display: inline-block;
+      background: linear-gradient(135deg, #4f86c0, #0544b0);
+      color: #fff;
+      padding: 20px 50px;
+      border-radius: 25px;
+      font-size: 26px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 15px;
+      box-shadow: 0 5px 15px rgba(185, 34, 114, 0.3);
+   
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
+       }
+    .main-btn:hover {
+            transform: scale(1.07);
+      background: linear-gradient(135deg, #2084a0, #0544b0);
+    }
+
+    .main-btn a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .main-btn i {
+      font-size: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .main-btn i:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+ 
+    .forum-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    /* الزر */
+    /* الزر */
+.forum-btn {
+  background: linear-gradient(90deg, #a728b8, #e9479d);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+/* أيقونة الواتساب */
+.forum-btn .bxl-whatsapp {
+  font-size: 70px; /* 🔹 كبيرة وواضحة */
+  margin-left: 8px;
+}
+
+/* أيقونة السهم */
+.forum-btn .bx-right-arrow-alt {
+  font-size: 40px; /* 🔹 صغيرة وأنيقة */
+  margin-right: 8px;
+}
+
+/* تأثير اللمس */
+.forum-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+  background: linear-gradient(90deg, #0c8b63,#20bd5a);
+}
+
+
+    /* أنيميشن النبض */
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(37, 211, 102, 0.4); }
+      50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(37, 211, 102, 0.6); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(37, 211, 102, 0.4); }
+    }
+   
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ شريط الشعارات -->
+  <div class="logos-bar">
+    <div style="display: flex; gap: 15px;">
+      <img src="images/damietta.png" alt="شعار الجامعة" />
+      <img src="images/LOGO.jpg" alt="شعار الكلية" />
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="images/may.jpg" alt="مي" class="my-pic" />
+      <div style="text-align: right; margin-right: 10px;">
+        <p style="margin: 0; font-weight: bold; color: #b92272;font-size: 10px"> أدوات التواصل</p>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a href="https://www.facebook.com/share/19LJPEeQQN/" target="_blank" style="color:#3b5998; font-size: 20px;"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="https://wa.me/201062309203" target="_blank" style="color:#25D366; font-size: 20px;"><i class='bx bxl-whatsapp'></i></a>
+          <a href="mailto:maysabla5557@gmail.com" style="color:#EA4335; font-size: 20px;"><i class='bx bxl-gmail'></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ شريط التنقل -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">الصفحة الرئيسية</a></li>
+      <li><a href="instructions.html">تعليمات الاستخدام</a></li>
+      <li><a href="objectives.html">أهداف بيئة التعلم</a></li>
+      <li><a href="tests.html">الاختبارات</a></li>
+      <li><a href="total modules.html">الموديولات</a></li>
+<li><a href="contact-us.html" class="special-link"><i class='bx bx-group'></i> التشارك مع الزملاء</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ المحتوى -->
+  <main>
+    <section class="intro-heading">
+      <div class="supervisor-card">
+  <h1 style="text-align: right; color: #f52cda;">عزيزي الطالب .. عزيزتي الطالبة</h1>
+  <h3 style="text-align: right;">
+    يمكنك التشارك يوميًا مع زملائك من الساعة 4 - 10 مساءً لتلقي الدعم الذي تحتاجه في مشروعك.
+  </h3>
+
+  <!-- ✅ الجملة التوضيحية -->
+ 
+
+  <!-- ✅ زر المنتدى -->
+ <div class="forum-section">
+  <a href="https://chat.whatsapp.com/IhSXkckb7Hn19UQt5tUCIH?mode=ems_copy_t" class="forum-btn" target="_blank">
+        منتدى التشارك مع زملائك
+    <i class='bx bxl-whatsapp'></i>
+    <i class='bx bx-right-arrow-alt'></i>
+  </a>
+</div>
+
+
+
+    </section>
+  </main>
+<br>
+
+  <!-- ✅ الفوتر -->
+  <footer>
+    <p class="footer-info">
+      <span class="uni">جامعة دمياط -</span>
+      <span class="faculty">كلية التربية -</span>
+      <span class="dept">قسم تكنولوجيا التعليم</span>
+      <span class="name">- مي محمد حافظ سبلة</span>
+      <span class="job">- معيدة بقسم تكنولوجيا التعليم</span>
+    </p>
+    <p class="footer-year">© 2025</p>
+  </footer>
+
+  <script>
+    // ضبط موضع شريط التنقل
+    window.addEventListener('load', () => {
+      const logosBar = document.querySelector('.logos-bar');
+      const navBar = document.querySelector('nav');
+      if (logosBar && navBar) {
+        navBar.style.top = logosBar.offsetHeight + 'px';
+      }
+    });
+
+    window.addEventListener("load", function () {
+      document.body.classList.add("loaded");
+    });
+  </script>
+
+</body>
+</html>
